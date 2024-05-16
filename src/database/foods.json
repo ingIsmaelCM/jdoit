@@ -1,0 +1,2985 @@
+[
+  {
+    "name": "Amaranto, semilla, cruda (Amarantus caudatus)",
+    "calories": 1607.8,
+    "proteins": 384,
+    "carbohidrates": 15.3,
+    "fiber": 63.6,
+    "sodium": 0,
+    "Calcio": 0,
+    "Potasio": 0,
+    "Fósforo": 0,
+    "Hierro": 12.17,
+    "Zinc": 4.8,
+    "Tiamina": 0,
+    "group": "Cereales",
+    "fat": 7.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Amaranto, semilla, cruda (Amarantus hipochondriacus)",
+    "calories": 1595.8,
+    "proteins": 381,
+    "carbohidrates": 14.4,
+    "group": "Cereales",
+    "fat": 7.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Amaranto, semilla, cruda (Amarantus mantegazzianus)",
+    "calories": 1623.3,
+    "proteins": 388,
+    "carbohidrates": 15.4,
+    "group": "Cereales",
+    "fat": 8.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Amaranto, semillia, cruda (Amarantus cruentus)",
+    "calories": 1608.2,
+    "proteins": 384,
+    "carbohidrates": 15.6,
+    "group": "Cereales",
+    "fat": 7.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Arroz, grano, blanco, pulido, crudo",
+    "calories": 1419,
+    "proteins": 339,
+    "carbohidrates": 6.9,
+    "group": "Cereales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Arroz, grano, blanco, pulido, hervido",
+    "calories": 343,
+    "proteins": 82,
+    "carbohidrates": 1.4,
+    "group": "Cereales",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Avena , grano, arrollada, cruda",
+    "calories": 1603.6,
+    "proteins": 383,
+    "carbohidrates": 15.6,
+    "group": "Cereales",
+    "fat": 7.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Avena, grano, arrollada, cruda",
+    "calories": 1436.1,
+    "proteins": 343,
+    "carbohidrates": 12.8,
+    "group": "Cereales",
+    "fat": 7.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Avena, grano, arrollada, hervida",
+    "calories": 360,
+    "proteins": 86,
+    "carbohidrates": 3.8,
+    "group": "Cereales",
+    "fat": 1.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cebada, grano, mondado, perlado, crudo",
+    "calories": 1326,
+    "proteins": 317,
+    "carbohidrates": 10.2,
+    "group": "Cereales",
+    "fat": 1.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cebada, grano, mondado, perlado, hervido",
+    "calories": 344,
+    "proteins": 82,
+    "carbohidrates": 3.8,
+    "group": "Cereales",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cebada, harina Genser, cruda",
+    "calories": 1374,
+    "proteins": 328,
+    "carbohidrates": 10.2,
+    "group": "Cereales",
+    "fat": 1.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Centeno, harina, clara, cruda",
+    "calories": 1392,
+    "proteins": 332,
+    "carbohidrates": 8.9,
+    "group": "Cereales",
+    "fat": 0.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Centeno, pan",
+    "calories": 863,
+    "proteins": 206,
+    "carbohidrates": 8.7,
+    "group": "Cereales",
+    "fat": 0.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Centeno, pan con harina integral",
+    "calories": 894,
+    "proteins": 214,
+    "carbohidrates": 10.4,
+    "group": "Cereales",
+    "fat": 0.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz amarillo, pisingallo, grano entero, crudo",
+    "calories": 1444.5,
+    "proteins": 345,
+    "carbohidrates": 10.9,
+    "group": "Cereales",
+    "fat": 0.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz amarillo, sémola, grano entero, crudo",
+    "calories": 1277,
+    "proteins": 305,
+    "carbohidrates": 9,
+    "group": "Cereales",
+    "fat": 1.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, amarillo Leales, grano entero, crudo",
+    "calories": 1448.7,
+    "proteins": 346,
+    "carbohidrates": 10.6,
+    "group": "Cereales",
+    "fat": 0.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, amarillo trópico 327, grano entero, crudo",
+    "calories": 1439.1,
+    "proteins": 344,
+    "carbohidrates": 9.8,
+    "group": "Cereales",
+    "fat": 1.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, blanco 8 rayas, grano entero, crudo",
+    "calories": 1423.6,
+    "proteins": 340,
+    "carbohidrates": 7.3,
+    "group": "Cereales",
+    "fat": 0.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, blanco perla, grano entero, crudo",
+    "calories": 1402.6,
+    "proteins": 335,
+    "carbohidrates": 9,
+    "group": "Cereales",
+    "fat": 0.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, choclo",
+    "calories": 405,
+    "proteins": 97,
+    "carbohidrates": 3.7,
+    "group": "Cereales",
+    "fat": 1.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, grano, entero (Zea mays spp)",
+    "calories": 1449,
+    "proteins": 346,
+    "carbohidrates": 9.5,
+    "group": "Cereales",
+    "fat": 0.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, harina amarilla (polenta), cruda",
+    "calories": 1415,
+    "proteins": 338,
+    "carbohidrates": 9.1,
+    "group": "Cereales",
+    "fat": 4.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, harina amarilla (polenta), cruda",
+    "calories": 1545,
+    "proteins": 369,
+    "carbohidrates": 11.1,
+    "group": "Cereales",
+    "fat": 3.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, harina amarilla (polenta), hervida",
+    "calories": 285,
+    "proteins": 68,
+    "carbohidrates": 3.2,
+    "group": "Cereales",
+    "fat": 0.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maiz, pan",
+    "calories": 1151.4,
+    "proteins": 275,
+    "carbohidrates": 9.1,
+    "group": "Cereales",
+    "fat": 2.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, bizcochos Bay Biscuit",
+    "calories": 1653,
+    "proteins": 382,
+    "carbohidrates": 5.9,
+    "group": "Cereales",
+    "fat": 10.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, bizcochos, vainillas",
+    "calories": 1679,
+    "proteins": 401,
+    "carbohidrates": 10.2,
+    "group": "Cereales",
+    "fat": 8.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, galleta de campo",
+    "calories": 1256.1,
+    "proteins": 300,
+    "carbohidrates": 9.8,
+    "group": "Cereales",
+    "fat": 1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, galleta marinera",
+    "calories": 1511.5,
+    "proteins": 361,
+    "carbohidrates": 12.8,
+    "group": "Cereales",
+    "fat": 0.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, galletitas de agua Express",
+    "calories": 1850.7,
+    "proteins": 442,
+    "carbohidrates": 13.5,
+    "group": "Cereales", 
+    "fat": 15.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, galletitas de agua Traviata",
+    "calories": 1829.7,
+    "proteins": 437,
+    "carbohidrates": 12.2,
+    "group": "Cereales", 
+    "fat": 13.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, galletitas de harina blanca",
+    "calories": 1716.7,
+    "proteins": 410,
+    "carbohidrates": 12.2,
+    "group": "Cereales", 
+    "fat": 11.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, galletitas de harina integral",
+    "calories": 1720.9,
+    "proteins": 411,
+    "carbohidrates": 10.6,
+    "group": "Cereales",
+    "fat": 15.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, galletitas dulces Manón",
+    "calories": 1746,
+    "proteins": 417,
+    "carbohidrates": 8.5,
+    "group": "Cereales",
+    "fat": 10.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, galletitas dulces Minue",
+    "calories": 1754.4,
+    "proteins": 419,
+    "carbohidrates": 8.2,
+    "group": "Cereales",
+    "fat": 13.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, galletitas oblea Opera",
+    "calories": 1850.7,
+    "proteins": 442,
+    "carbohidrates": 4.9,
+    "group": "Cereales",
+    "fat": 21.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, grano entero, crudo",
+    "calories": 1452.9,
+    "proteins": 347,
+    "carbohidrates": 12.4,
+    "group": "Cereales",
+    "fat": 2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, grisines",
+    "calories": 1432,
+    "proteins": 342,
+    "carbohidrates": 12.5,
+    "group": "Cereales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, harina cuatro ceros",
+    "calories": 1457.1,
+    "proteins": 348,
+    "carbohidrates": 10.2,
+    "group": "Cereales",
+    "fat": 2.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, harina integral",
+    "calories": 1289.6,
+    "proteins": 308,
+    "carbohidrates": 11.4,
+    "group": "Cereales",
+    "fat": 3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, harina tres cero",
+    "calories": 1423.6,
+    "proteins": 340,
+    "carbohidrates": 10.3,
+    "group": "Cereales",
+    "fat": 2.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, pan alemán",
+    "calories": 1105.4,
+    "proteins": 264,
+    "carbohidrates": 8.9,
+    "group": "Cereales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, pan criollo",
+    "calories": 1172.4,
+    "proteins": 280,
+    "carbohidrates": 8.7,
+    "group": "Cereales",
+    "fat": 0.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, pan de Viena",
+    "calories": 1285.4,
+    "proteins": 307,
+    "carbohidrates": 9.8,
+    "group": "Cereales",
+    "fat": 1.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, pan de salvado",
+    "calories": 933.7,
+    "proteins": 223,
+    "carbohidrates": 9.8,
+    "group": "Cereales",
+    "fat": 1.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, pan francés",
+    "calories": 1122.1,
+    "proteins": 268,
+    "carbohidrates": 8.4,
+    "group": "Cereales",
+    "fat": 0.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, pan francés",
+    "calories": 1126.3,
+    "proteins": 269,
+    "carbohidrates": 9.3,
+    "group": "Cereales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, pan negro con levadura agria",
+    "calories": 1134.7,
+    "proteins": 271,
+    "carbohidrates": 8.4,
+    "group": "Cereales",
+    "fat": 0.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, pan negro con levadura comprimida",
+    "calories": 1126.3,
+    "proteins": 269,
+    "carbohidrates": 9.5,
+    "group": "Cereales",
+    "fat": 2.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, pan negro sin levadura",
+    "calories": 1126.3,
+    "proteins": 269,
+    "carbohidrates": 9.6,
+    "group": "Cereales",
+    "fat": 0.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, salvado",
+    "calories": 716,
+    "proteins": 171,
+    "carbohidrates": 16.3,
+    "group": "Cereales",
+    "fat": 5.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, sémola, cruda",
+    "calories": 1461.3,
+    "proteins": 349,
+    "carbohidrates": 11.7,
+    "group": "Cereales",
+    "fat": 0.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, sémola, hervida",
+    "calories": 293.1,
+    "proteins": 70,
+    "carbohidrates": 2.4,
+    "group": "Cereales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Trigo, tallarines, frescos, hervidos",
+    "calories": 410.3,
+    "proteins": 98,
+    "carbohidrates": 4.1,
+    "group": "Cereales",
+    "fat": 1.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Acelga, hoja",
+    "calories": 15,
+    "proteins": 2.9,
+    "carbohidrates": 0,
+    "group": "Vegetales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Acelga, tallo",
+    "calories": 8,
+    "proteins": 1.2,
+    "carbohidrates": 0,
+    "group": "Vegetales", "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Achicoria de Monte",
+    "calories": 46,
+    "proteins": 2.8,
+    "carbohidrates": 7.7,
+    "group": "Vegetales",
+    "fat": 1.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Achicoria, hoja, fresca, cruda",
+    "calories": 21,
+    "proteins": 1.6,
+    "carbohidrates": 2.9,
+    "group": "Vegetales",
+    "fat": 0.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Achira (raíces)",
+    "calories": 34,
+    "proteins": 1.7,
+    "carbohidrates": 7.9,
+    "group": "Vegetales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ajo, bulbo, fresco, crudo",
+    "calories": 99,
+    "proteins": 4.4,
+    "carbohidrates": 20,
+    "group": "Vegetales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Alcaucil, inflorescencia, fresco, crudo",
+    "calories": 63,
+    "proteins": 2.9,
+    "carbohidrates": 11.9,
+    "group": "Vegetales",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Alfalfa, hoja, fresca, cruda",
+    "calories": 57,
+    "proteins": 6.6,
+    "carbohidrates": 6.8,
+    "group": "Vegetales",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Arveja, semilla, fresca, cruda",
+    "calories": 102,
+    "proteins": 8.9,
+    "carbohidrates": 16.6,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Arveja, semilla, fresca, enlatada",
+    "calories": 105,
+    "proteins": 6,
+    "carbohidrates": 0,
+    "group": "Vegetales",
+    "fat": 0.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Arveja, semilla, fresca, hervida",
+    "calories": 77,
+    "proteins": 5.8,
+    "carbohidrates": 13.4,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Arveja, semilla, seca, entera, cruda",
+    "calories": 304,
+    "proteins": 22.5,
+    "carbohidrates": 0,
+    "group": "Vegetales",
+    "fat": 2.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Arveja, semilla, seca, partida, cruda",
+    "calories": 311,
+    "proteins": 22,
+    "carbohidrates": 0,
+    "group": "Vegetales",
+    "fat": 2.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Arveja, semilla, seca, partida, hervida",
+    "calories": 129,
+    "proteins": 8.2,
+    "carbohidrates": 22.5,
+    "group": "Vegetales", "fat": 0.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Avellana, pepita, seca",
+    "calories": 668,
+    "proteins": 12.7,
+    "carbohidrates": 17.7,
+    "group": "Vegetales", "fat": 60.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Batata, frita",
+    "calories": 212,
+    "proteins": 1.7,
+    "carbohidrates": 35,
+    "group": "Vegetales", "fat": 7.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Batata, hervida",
+    "calories": 92,
+    "proteins": 1.2,
+    "carbohidrates": 21.7,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Batata, raiz, fresca, cruda",
+    "calories": 84,
+    "proteins": 1.1,
+    "carbohidrates": 19.8,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Berenjena, pulpa, fresca, cruda",
+    "calories": 28,
+    "proteins": 1.1,
+    "carbohidrates": 5.5,
+    "group": "Vegetales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Berro (hojas y tallo), fresco, crudo",
+    "calories": 23,
+    "proteins": 1.7,
+    "carbohidrates": 3.3,
+    "group": "Vegetales",
+    "fat": 0.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Brócoli, tallo de hoja, fresco, crudo",
+    "calories": 37,
+    "proteins": 3.3,
+    "carbohidrates": 5.5,
+    "group": "Vegetales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cardo (penca y hojas), fresco, crudo",
+    "calories": 25,
+    "proteins": 1.4,
+    "carbohidrates": 4.4,
+    "group": "Vegetales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Castaña de Pará, pepita, cruda",
+    "calories": 731,
+    "proteins": 18.1,
+    "carbohidrates": 2.4,
+    "group": "Vegetales", "fat": 72.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cebolla blanca, bulbo, cruda",
+    "calories": 17,
+    "proteins": 0.8,
+    "carbohidrates": 3.5,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cebolla blanca, bulbo, hervida",
+    "calories": 10,
+    "proteins": 0.6,
+    "carbohidrates": 1.8,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Chaucha, vaina y semilla, cruda",
+    "calories": 22,
+    "proteins": 2.4,
+    "carbohidrates": 3.2,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Coliflor, pimpollo, fresco, crudo",
+    "calories": 31,
+    "proteins": 2.4,
+    "carbohidrates": 4.9,
+    "group": "Vegetales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Diente de león, hoja",
+    "calories": 33,
+    "proteins": 2.6,
+    "carbohidrates": 6.6,
+    "group": "Vegetales",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Escarola crespa, hoja, cruda",
+    "calories": 24,
+    "proteins": 1.6,
+    "carbohidrates": 4,
+    "group": "Vegetales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Esparrago, tallo tierno, fresco, crudo",
+    "calories": 26,
+    "proteins": 2.2,
+    "carbohidrates": 3.9,
+    "group": "Vegetales", "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Espinaca, hoja, fresca, cruda",
+    "calories": 24,
+    "proteins": 3.9,
+    "carbohidrates": 2,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Espinaca, hoja, fresca, hervida",
+    "calories": 13,
+    "proteins": 2.5,
+    "carbohidrates": 0.7,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Garbanzo, grano entero, seco, hervido",
+    "calories": 125,
+    "proteins": 6.1,
+    "carbohidrates": 20.2,
+    "group": "Vegetales", "fat": 2.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Habas, semilla inmadura, fresca, cruda",
+    "calories": 99,
+    "proteins": 6.7,
+    "carbohidrates": 16.3,
+    "group": "Vegetales",
+    "fat": 0.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Hinojo, tallo, fresco, crudo",
+    "calories": 24,
+    "proteins": 1.9,
+    "carbohidrates": 3.6,
+    "group": "Vegetales",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Lengua de vaca, hojas, tejido fresco, parte comestible",
+    "calories": 43,
+    "proteins": 3.1,
+    "carbohidrates": 7.6,
+    "group": "Vegetales",
+    "fat": 0.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Lenteja, semilla entera, seca, cruda",
+    "calories": 350,
+    "proteins": 20.8,
+    "carbohidrates": 64.8,
+    "group": "Vegetales",
+    "fat": 0.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Lupino andino, con cáscara, semilla, crudo",
+    "calories": 399,
+    "proteins": 37.8,
+    "carbohidrates": 39.5,
+    "group": "Vegetales", "fat": 10,
+    "cholesterol": 0
+  },
+  {
+    "name": "Lupino andino, sin cáscara, semilla, crudo",
+    "calories": 411,
+    "proteins": 38.4,
+    "carbohidrates": 38.3,
+    "group": "Vegetales", "fat": 11.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maní, semilla con piel, crudo",
+    "calories": 576,
+    "proteins": 33.2,
+    "carbohidrates": 11.1,
+    "group": "Vegetales", "fat": 44.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Maní, semilla sin piel, tostado",
+    "calories": 592,
+    "proteins": 34.8,
+    "carbohidrates": 10.8,
+    "group": "Vegetales", "fat": 45.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mastuerzo (hoja y pecíolo), fresco, crudo",
+    "calories": 51,
+    "proteins": 4.2,
+    "carbohidrates": 5.3,
+    "group": "Vegetales",
+    "fat": 1.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mastuerzo, hoja",
+    "calories": 50,
+    "proteins": 3.7,
+    "carbohidrates": 8.1,
+    "group": "Vegetales",
+    "fat": 1.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Nabo, hervido",
+    "calories": 11,
+    "proteins": 0.8,
+    "carbohidrates": 1.9,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Nabo, raiz (pulpa), fresco, crudo",
+    "calories": 10,
+    "proteins": 1,
+    "carbohidrates": 1.5,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Nuez, pepita",
+    "calories": 715,
+    "proteins": 13.9,
+    "carbohidrates": 13.2,
+    "group": "Vegetales", "fat": 67.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Papa, pulpa sin cáscara, fresca, cruda",
+    "calories": 88,
+    "proteins": 2.7,
+    "carbohidrates": 19.3,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Papa, pulpa sin cáscara, frita, bastón",
+    "calories": 162,
+    "proteins": 2.9,
+    "carbohidrates": 23.6,
+    "group": "Vegetales",
+    "fat": 6.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Papa, pulpa sin cáscara, hervida",
+    "calories": 88,
+    "proteins": 2.4,
+    "carbohidrates": 19.6,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pepino, pulpa, fresco, crudo",
+    "calories": 15,
+    "proteins": 0.7,
+    "carbohidrates": 2.7,
+    "group": "Vegetales",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Perejil, hoja, fresco, crudo",
+    "calories": 60,
+    "proteins": 3.7,
+    "carbohidrates": 9,
+    "group": "Vegetales",
+    "fat": 1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pistacho, pepita, crudo",
+    "calories": 648,
+    "proteins": 22.3,
+    "carbohidrates": 18.1,
+    "group": "Vegetales", "fat": 54,
+    "cholesterol": 0
+  },
+  {
+    "name": "Piñon de araucaria, pepita, crudo",
+    "calories": 221,
+    "proteins": 14.6,
+    "carbohidrates": 37.9,
+    "group": "Vegetales",
+    "fat": 1.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Alubia, semilla, seco",
+    "calories": 337,
+    "proteins": 19.8,
+    "carbohidrates": 62.8,
+    "group": "Vegetales",
+    "fat": 0.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Carioca, semilla, seco",
+    "calories": 336,
+    "proteins": 20,
+    "carbohidrates": 62,
+    "group": "Vegetales",
+    "fat": 0.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Colorado, semilla, seco",
+    "calories": 333,
+    "proteins": 19.6,
+    "carbohidrates": 61,
+    "group": "Vegetales",
+    "fat": 1.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Grand Berry, semilla, seco",
+    "calories": 336,
+    "proteins": 21.5,
+    "carbohidrates": 60.4,
+    "group": "Vegetales",
+    "fat": 1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Great Northern, semilla, seco",
+    "calories": 326,
+    "proteins": 21,
+    "carbohidrates": 60.6,
+    "group": "Vegetales", "fat": 0.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Negro, semilla, seco",
+    "calories": 306,
+    "proteins": 20.6,
+    "carbohidrates": 61.5,
+    "group": "Vegetales",
+    "fat": 1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Novy Bean, semilla, seco",
+    "calories": 336,
+    "proteins": 26,
+    "carbohidrates": 55.6,
+    "group": "Vegetales",
+    "fat": 1.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Oval, semilla, seco",
+    "calories": 328,
+    "proteins": 18.2,
+    "carbohidrates": 63.7,
+    "group": "Vegetales",
+    "fat": 1.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Pallares, semilla, seco",
+    "calories": 322,
+    "proteins": 16.6,
+    "carbohidrates": 63.3,
+    "group": "Vegetales",
+    "fat": 0.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto Small Red, semilla, seco",
+    "calories": 336,
+    "proteins": 25.3,
+    "carbohidrates": 56.7,
+    "group": "Vegetales",
+    "fat": 0.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto, semilla, enlatado",
+    "calories": 89,
+    "proteins": 8.4,
+    "carbohidrates": 0,
+    "group": "Vegetales",
+    "fat": 0.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Poroto, semilla, seco, crudo",
+    "calories": 290,
+    "proteins": 23.9,
+    "carbohidrates": 0,
+    "group": "Vegetales",
+    "fat": 2.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Puerro (bulbo, tallo y hojas), fresco, crudo",
+    "calories": 45,
+    "proteins": 2.5,
+    "carbohidrates": 7.9,
+    "group": "Vegetales",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Quinua, harina",
+    "calories": 341,
+    "proteins": 4.4,
+    "carbohidrates": 78.7,
+    "group": "Vegetales",
+    "fat": 1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Quinua, semilla, cruda",
+    "calories": 354,
+    "proteins": 13.8,
+    "carbohidrates": 63.3,
+    "group": "Vegetales",
+    "fat": 5.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Rabanito, raiz, fresco, crudo",
+    "calories": 29,
+    "proteins": 1.3,
+    "carbohidrates": 5.8,
+    "group": "Vegetales",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Radicheta, hoja, fresco, cruda",
+    "calories": 0,
+    "proteins": 2.2,
+    "carbohidrates": 0,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Remolacha, tubérculo, fresca, cruda",
+    "calories": 54,
+    "proteins": 2.4,
+    "carbohidrates": 11.1,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Remolacha, tubérculo, hervida",
+    "calories": 36,
+    "proteins": 1,
+    "carbohidrates": 7.9,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Repollito Bruselas, hoja, fresco, crudo",
+    "calories": 58,
+    "proteins": 4.4,
+    "carbohidrates": 8.9,
+    "group": "Vegetales",
+    "fat": 0.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Repollo blanco, hoja, fresco, crudo",
+    "calories": 17,
+    "proteins": 2.4,
+    "carbohidrates": 1.9,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Repollo blanco, hoja, hervido",
+    "calories": 16,
+    "proteins": 2.2,
+    "carbohidrates": 1.8,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Salsifí, raiz, fresco, crudo",
+    "calories": 85,
+    "proteins": 3.5,
+    "carbohidrates": 15.5,
+    "group": "Vegetales",
+    "fat": 1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Soja FT11, poroto seco",
+    "calories": 368,
+    "proteins": 36.9,
+    "carbohidrates": 39.8,
+    "group": "Vegetales",
+    "fat": 6.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Soja, semilla madura, seca, cruda",
+    "calories": 356,
+    "proteins": 34.6,
+    "carbohidrates": 0,
+    "group": "Vegetales", "fat": 24.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Tapioca, cruda (harina mandioca)",
+    "calories": 336,
+    "proteins": 2,
+    "carbohidrates": 82,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Tapioca, hervida",
+    "calories": 55,
+    "proteins": 0.1,
+    "carbohidrates": 13.7,
+    "group": "Vegetales",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Tomate, fresco, crudo",
+    "calories": 20,
+    "proteins": 1,
+    "carbohidrates": 4.1,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Tomate, hervido",
+    "calories": 21,
+    "proteins": 1,
+    "carbohidrates": 4.2,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Tomate, jugo, fresco",
+    "calories": 11,
+    "proteins": 1,
+    "carbohidrates": 1.7,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Verdolaga, hoja",
+    "calories": 32,
+    "proteins": 2.4,
+    "carbohidrates": 5.7,
+    "group": "Vegetales",
+    "fat": 0.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Verdolaga, hoja y tallo, fresca, cruda",
+    "calories": 23,
+    "proteins": 1.6,
+    "carbohidrates": 3.3,
+    "group": "Vegetales",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Yuyo colorado, hoja",
+    "calories": 60,
+    "proteins": 4.1,
+    "carbohidrates": 11.1,
+    "group": "Vegetales", "fat": 0.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Zanahoria, jugo, fresco",
+    "calories": 22,
+    "proteins": 1,
+    "carbohidrates": 4.4,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Zanahoria, raiz, pelada, fresca",
+    "calories": 0,
+    "proteins": 1.1,
+    "carbohidrates": 12,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Zanahoria, raiz, pelada, hervida",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Zapallito, parte tierna, fresco, crudo",
+    "calories": 13,
+    "proteins": 0.8,
+    "carbohidrates": 2.4,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Zapallito, parte tierna, hervido",
+    "calories": 16,
+    "proteins": 1.3,
+    "carbohidrates": 2.8,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Zapallo, pulpa, fresco, crudo",
+    "calories": 27,
+    "proteins": 0.5,
+    "carbohidrates": 5.8,
+    "group": "Vegetales", "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Zapallo, pulpa, hervido",
+    "calories": 20,
+    "proteins": 0.4,
+    "carbohidrates": 4.6,
+    "group": "Vegetales", "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceituna de monte",
+    "calories": 93,
+    "proteins": 1.6,
+    "carbohidrates": 19.4,
+    "group": "Frutas",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceituna verde, pulpa, encurtida",
+    "calories": 144,
+    "proteins": 1.5,
+    "carbohidrates": 4,
+    "group": "Frutas",
+    "fat": 13.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ananá enlatado, contenido envase",
+    "calories": 87,
+    "proteins": 0.4,
+    "carbohidrates": 21.1,
+    "group": "Frutas",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ananá, pulpa, fresco",
+    "calories": 58,
+    "proteins": 0.4,
+    "carbohidrates": 13.7,
+    "group": "Frutas",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Banana, pulpa, fresca",
+    "calories": 99,
+    "proteins": 1.2,
+    "carbohidrates": 23,
+    "group": "Frutas",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cereza, pulpa, fresca",
+    "calories": 68,
+    "proteins": 1.1,
+    "carbohidrates": 14.8,
+    "group": "Frutas",
+    "fat": 0.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ciruela, pasa, cruda",
+    "calories": 255,
+    "proteins": 1.9,
+    "carbohidrates": 61.6,
+    "group": "Frutas",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ciruela, pasa, hervida",
+    "calories": 165,
+    "proteins": 1,
+    "carbohidrates": 40.1,
+    "group": "Frutas",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ciruela, pulpa, fresca",
+    "calories": 56,
+    "proteins": 0.7,
+    "carbohidrates": 12.9,
+    "group": "Frutas",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Coco, pulpa, fresco, crudo",
+    "calories": 382,
+    "proteins": 3.4,
+    "carbohidrates": 14,
+    "group": "Frutas",
+    "fat": 34.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Damasco, pulpa, fresco, crudo",
+    "calories": 57,
+    "proteins": 1,
+    "carbohidrates": 12.9,
+    "group": "Frutas",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Doca",
+    "calories": 49,
+    "proteins": 1.6,
+    "carbohidrates": 11.5,
+    "group": "Frutas",
+    "fat": 1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Durazno orejón, pulpa y piel, hervido",
+    "calories": 40,
+    "proteins": 2.5,
+    "carbohidrates": 7.5,
+    "group": "Frutas",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Durazno, pulpa, envasado al natural",
+    "calories": 75,
+    "proteins": 0.4,
+    "carbohidrates": 18.2,
+    "group": "Frutas",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Durazno, pulpa, fresco, crudo",
+    "calories": 51,
+    "proteins": 0.5,
+    "carbohidrates": 12,
+    "group": "Frutas",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Frutilla pulpa, fresca, cruda",
+    "calories": 41,
+    "proteins": 0.8,
+    "carbohidrates": 8.1,
+    "group": "Frutas",
+    "fat": 0.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Granada, pulpa, fresca",
+    "calories": 75,
+    "proteins": 0.6,
+    "carbohidrates": 17.7,
+    "group": "Frutas",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Guaraniná, Brumelia obtusifolia",
+    "calories": 147,
+    "proteins": 1.6,
+    "carbohidrates": 23.7,
+    "group": "Frutas",
+    "fat": 3.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Higo, pulpa, fresca",
+    "calories": 88,
+    "proteins": 1.4,
+    "carbohidrates": 19.6,
+    "group": "Frutas",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Kaki, pulpa, fresco",
+    "calories": 87,
+    "proteins": 0.8,
+    "carbohidrates": 20,
+    "group": "Frutas",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Kinoto, pulpa y cáscara, fresco, crudo",
+    "calories": 73,
+    "proteins": 0.9,
+    "carbohidrates": 17.1,
+    "group": "Frutas",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Limón, pulpa, fresco",
+    "calories": 44,
+    "proteins": 0.9,
+    "carbohidrates": 8.7,
+    "group": "Frutas",
+    "fat": 0.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Manzana, hervida",
+    "calories": 26,
+    "proteins": 0.5,
+    "carbohidrates": 6,
+    "group": "Frutas",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Manzana, pulpa, fresca, cruda",
+    "calories": 64,
+    "proteins": 0.3,
+    "carbohidrates": 14.9,
+    "group": "Frutas",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mburucuyá maduro",
+    "calories": 84,
+    "proteins": 4.7,
+    "carbohidrates": 23.4,
+    "group": "Frutas",
+    "fat": 1.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mburucuyá verde",
+    "calories": 59,
+    "proteins": 3.2,
+    "carbohidrates": 15.7,
+    "group": "Frutas",
+    "fat": 1.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Melón, pulpa, fresco",
+    "calories": 28,
+    "proteins": 0.6,
+    "carbohidrates": 5.9,
+    "group": "Frutas",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Membrillo, pulpa, fresco, crudo",
+    "calories": 58,
+    "proteins": 0.3,
+    "carbohidrates": 13.9,
+    "group": "Frutas",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mora, fresca",
+    "calories": 69,
+    "proteins": 1.2,
+    "carbohidrates": 14.6,
+    "group": "Frutas",
+    "fat": 0.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Palta, pulpa, fresca",
+    "calories": 258,
+    "proteins": 1.7,
+    "carbohidrates": 3.3,
+    "group": "Frutas",
+    "fat": 26.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pera, orejón, crudo",
+    "calories": 299,
+    "proteins": 2.3,
+    "carbohidrates": 71.6,
+    "group": "Frutas",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pera, pulpa, fresca, cruda",
+    "calories": 70,
+    "proteins": 0.7,
+    "carbohidrates": 15.8,
+    "group": "Frutas",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pomelo, pulpa, fresco",
+    "calories": 26,
+    "proteins": 0.5,
+    "carbohidrates": 5.9,
+    "group": "Frutas",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Sandía, pulpa, fresca, cruda",
+    "calories": 31,
+    "proteins": 0.5,
+    "carbohidrates": 6.9,
+    "group": "Frutas",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ubajay",
+    "calories": 49,
+    "proteins": 1.1,
+    "carbohidrates": 8.1,
+    "group": "Frutas",
+    "fat": 1.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ñandapirí",
+    "calories": 70,
+    "proteins": 1.7,
+    "carbohidrates": 14.3,
+    "group": "Frutas",
+    "fat": 0.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cerdo, chorizo, fresco, crudo",
+    "calories": 454,
+    "proteins": 13,
+    "carbohidrates": 1.1,
+    "group": "Carnes",
+    "fat": 44.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cerdo, costilla flaca, cruda",
+    "calories": 250,
+    "proteins": 19.9,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 18.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cerdo, costilla, a la parrilla",
+    "calories": 320,
+    "proteins": 25.2,
+    "carbohidrates": 0,
+    "group": "Carnes", "fat": 24.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cerdo, jamón cocido",
+    "calories": 211,
+    "proteins": 20.3,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 14.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cerdo, jamón crudo",
+    "calories": 473,
+    "proteins": 18,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 44.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cerdo, panceta",
+    "calories": 670,
+    "proteins": 8.3,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 70.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cordero, carne de la paleta, crudo",
+    "calories": 99,
+    "proteins": 18.7,
+    "carbohidrates": 0,
+    "group": "Carnes", "fat": 2.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Cordero, carne de la paleta, flaca, a la parrilla",
+    "calories": 182,
+    "proteins": 28,
+    "carbohidrates": 0,
+    "group": "Carnes", "fat": 7.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pollo, asado a la parrilla",
+    "calories": 168,
+    "proteins": 29.8,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 5.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pollo, asado al horno",
+    "calories": 162,
+    "proteins": 28.4,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 5.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pollo, carne-pellejo-menudos, fresco, crudo",
+    "calories": 88,
+    "proteins": 16.3,
+    "carbohidrates": 0,
+    "group": "Carnes", "fat": 2.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pollo, hervido",
+    "calories": 198,
+    "proteins": 23.1,
+    "carbohidrates": 0,
+    "group": "Carnes", "fat": 11.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, asado, fresco, crudo",
+    "calories": 170,
+    "proteins": 18.4,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 10.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, bife angosto c/c de novillito, fresco, crudo",
+    "calories": 190,
+    "proteins": 21,
+    "carbohidrates": 0,
+    "group": "Carnes", "fat": 12,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, bife, a la parrilla",
+    "calories": 189,
+    "proteins": 24.6,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 10.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, bola de lomo de novillito, fresco, crudo",
+    "calories": 114,
+    "proteins": 22,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 3.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, brazuelo de novillito, fresco, crudo",
+    "calories": 120,
+    "proteins": 21,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 3.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, caracú (médula de hueso largo), crudo",
+    "calories": 785,
+    "proteins": 0.5,
+    "carbohidrates": 0,
+    "group": "Carnes", "fat": 87,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, colita de cuadril de novillito, fresco, crudo",
+    "calories": 143,
+    "proteins": 21,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 6.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, corazón de cuadril de novillito, fresco, crudo",
+    "calories": 116,
+    "proteins": 22,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 2.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, cuadril y bife angosto flaco, fresco, crudo",
+    "calories": 111,
+    "proteins": 21,
+    "carbohidrates": 0,
+    "group": "Carnes", "fat": 3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, en conserva, enlatado",
+    "calories": 224,
+    "proteins": 23.7,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 14.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, hamburguesas cocidas",
+    "calories": 248,
+    "proteins": 20.5,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 18.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, hamburguesas crudas",
+    "calories": 218,
+    "proteins": 17.3,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 16.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, hamburguesas light cocidas",
+    "calories": 199,
+    "proteins": 21,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 12.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, hamburguesas light crudas",
+    "calories": 175,
+    "proteins": 18.4,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 11.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, hígado, crudo",
+    "calories": 132,
+    "proteins": 19.7,
+    "carbohidrates": 6,
+    "group": "Carnes",
+    "fat": 3.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, jugo de carne",
+    "calories": 33,
+    "proteins": 6.8,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 0.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, lomo, fresco, crudo",
+    "calories": 116,
+    "proteins": 20,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, nalga de novillito, fresco, crudo",
+    "calories": 106,
+    "proteins": 22,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 1.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, nalga, fresco, crudo",
+    "calories": 97,
+    "proteins": 21.2,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 1.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, paleta de novillito, fresco, crudo",
+    "calories": 125,
+    "proteins": 19,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 5.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, paletín o marucha de novillito, fresco, crudo",
+    "calories": 132,
+    "proteins": 20,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 6.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, palomita de novillito, fresco, crudo",
+    "calories": 116,
+    "proteins": 20,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 3.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, pasta de hígado",
+    "calories": 335,
+    "proteins": 14,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 31,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, peceto de novillito, fresco, crudo",
+    "calories": 125,
+    "proteins": 23,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 1.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, pecho de novillito, fresco, crudo",
+    "calories": 139,
+    "proteins": 20,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 6.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, riñon, fresco, crudo",
+    "calories": 137,
+    "proteins": 15,
+    "carbohidrates": 0.9,
+    "group": "Carnes",
+    "fat": 8.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, tapa de cuadril de novillito, fresco, crudo",
+    "calories": 211,
+    "proteins": 20,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 15,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, ternera, costilla flaca, a la parrilla",
+    "calories": 139,
+    "proteins": 27.2,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 3.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, ternera, costilla flaca, fresco, crudo",
+    "calories": 95,
+    "proteins": 20,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 1.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, tortuguita de novillito, fresco, crudo",
+    "calories": 154,
+    "proteins": 22,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 7.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, vacío de novillito, fresco, crudo",
+    "calories": 174,
+    "proteins": 20,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 11,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, vacío flaco, fresco, crudo",
+    "calories": 171,
+    "proteins": 23.8,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 8.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, vacío, a la parrilla",
+    "calories": 258,
+    "proteins": 25.6,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 17.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacuno, vacío, al horno",
+    "calories": 241,
+    "proteins": 28.1,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 14.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Bife, cocido caribú",
+    "calories": 233,
+    "proteins": 36,
+    "carbohidrates": 0.1,
+    "group": "Carnes",
+    "fat": 9.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Bife, crudo  caribú",
+    "calories": 120,
+    "proteins": 20.7,
+    "carbohidrates": 4.3,
+    "group": "Carnes",
+    "fat": 2.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Nalga, cocida caribú",
+    "calories": 197,
+    "proteins": 38.6,
+    "carbohidrates": 0.7,
+    "group": "Carnes",
+    "fat": 4.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Nalga, cruda caribú",
+    "calories": 98,
+    "proteins": 19.5,
+    "carbohidrates": 4.9,
+    "group": "Carnes",
+    "fat": 0,
+    "cholesterol": 0
+  },
+  {
+    "name": "Paleta, cocida caribú",
+    "calories": 207,
+    "proteins": 37,
+    "carbohidrates": 0.4,
+    "group": "Carnes",
+    "fat": 6.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Paleta, cruda caribú",
+    "calories": 107,
+    "proteins": 19,
+    "carbohidrates": 0.2,
+    "group": "Carnes",
+    "fat": 3.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacío, cocido caribú",
+    "calories": 231,
+    "proteins": 41.1,
+    "carbohidrates": 1.2,
+    "group": "Carnes",
+    "fat": 6.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacío, crudo caribú",
+    "calories": 105,
+    "proteins": 18.4,
+    "carbohidrates": 3.1,
+    "group": "Carnes",
+    "fat": 2.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Bife, cocido criollo",
+    "calories": 236,
+    "proteins": 36.5,
+    "carbohidrates": 0.3,
+    "group": "Carnes",
+    "fat": 9.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Bife, crudo  criollo",
+    "calories": 120,
+    "proteins": 21.1,
+    "carbohidrates": 3.2,
+    "group": "Carnes",
+    "fat": 2.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Nalga, cocida  criollo",
+    "calories": 177,
+    "proteins": 35.1,
+    "carbohidrates": 0.6,
+    "group": "Carnes",
+    "fat": 3.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Nalga, cruda  criollo",
+    "calories": 103,
+    "proteins": 21,
+    "carbohidrates": 2.5,
+    "group": "Carnes",
+    "fat": 1.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Paleta, cocida  criollo",
+    "calories": 192,
+    "proteins": 35.5,
+    "carbohidrates": 0.9,
+    "group": "Carnes",
+    "fat": 5.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Paleta, cruda  criollo",
+    "calories": 106,
+    "proteins": 18.4,
+    "carbohidrates": 2,
+    "group": "Carnes",
+    "fat": 2.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacío, cocido  criollo",
+    "calories": 203,
+    "proteins": 38.4,
+    "carbohidrates": 1.2,
+    "group": "Carnes",
+    "fat": 5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Vacío, crudo  criollo",
+    "calories": 107,
+    "proteins": 18.4,
+    "carbohidrates": 2.7,
+    "group": "Carnes",
+    "fat": 2.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Jamon cocido. Reducido en cholesterol",
+    "calories": 98,
+    "proteins": 18,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 2.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Lomo ahumado de cerdo cocido.  Reducido en sodio y en cholesterol",
+    "calories": 95,
+    "proteins": 19,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mortadela. Rreducida en fat y en sodio",
+    "calories": 139,
+    "proteins": 16,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 5.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Pastron ahumado. Reducido en sodio y en cholesterol",
+    "calories": 79,
+    "proteins": 16,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 0.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Salami.  Reducido en sodio y en cholesterol",
+    "calories": 134,
+    "proteins": 22,
+    "carbohidrates": 0,
+    "group": "Carnes",
+    "fat": 4.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Carne de vizcacha",
+    "calories": 46,
+    "proteins": 23.9,
+    "carbohidrates": 7.7,
+    "group": "Carnes", "fat": 3.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche de burra, entera, fluida",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 6.2,
+    "group": "Lácteos", "fat": 1.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche de cabra, entera, fluida",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 3,
+    "group": "Lácteos", "fat": 5.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche de oveja, entera, fluida",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 4.5,
+    "group": "Lácteos", "fat": 6.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche de vaca parcialm. descremada, adic. con vit A y D",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 4.6,
+    "group": "Lácteos", "fat": 1.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche de vaca, entera, fluida, adicionada con vitamina A",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 4.6,
+    "group": "Lácteos", "fat": 2.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche de vaca, entera, fluida, pasteurizada",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 4.6,
+    "group": "Lácteos", "fat": 2.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche en polvo descremada",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 52.2,
+    "group": "Lácteos", "fat": 1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche en polvo entera",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 40.9,
+    "group": "Lácteos", "fat": 24.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche humana, entera, en polvo",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 49.5,
+    "group": "Lácteos", "fat": 31.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche humana, entera, fluida",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 7.1,
+    "group": "Lácteos", "fat": 4.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche, condensada, Nestlé",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 55.8,
+    "group": "Lácteos", "fat": 8.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mantequilla fresca",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 84,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso crema, entero, untable",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 3.9,
+    "group": "Lácteos", "fat": 22.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso descremado, untable",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 6.1,
+    "group": "Lácteos", "fat": 0.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso semidescremado, untable",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 5.5,
+    "group": "Lácteos", "fat": 4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso, Petit Suisse",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 14,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso  Blanco Argentino Semimagro",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 5.6,
+    "group": "Lácteos", "fat": 4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Belpaese",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 25.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Camembert",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 23,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Limburgués",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 26.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Por Salut",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 3.7,
+    "group": "Lácteos", "fat": 22.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso cremoso",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 4.2,
+    "group": "Lácteos", "fat": 22.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso cuartirolo",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 3.9,
+    "group": "Lácteos", "fat": 21.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso doble crema",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 20.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso mozarella",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 3.3,
+    "group": "Lácteos", "fat": 19.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Cheddar",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 26.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Chubut",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 24.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Fontina",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 33.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Gorgonzola",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 43.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Gruyere",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 29.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Holanda",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 27.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Pategrás",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 34.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Roquefort",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 38.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Suizo",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 1.9,
+    "group": "Lácteos", "fat": 31.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Tafí",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 30.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Tandil",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 27,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso azul",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 4.3,
+    "group": "Lácteos", "fat": 31.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso tipo Mar del Plata",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 25.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Goya",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 31.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Parmesano",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 24.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Provolone",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 29.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Reggianito",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 3.4,
+    "group": "Lácteos", "fat": 24.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Sardo",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 5,
+    "group": "Lácteos", "fat": 29.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Queso Sbrinz",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Lácteos", "fat": 26.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ricota de leche entera",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 4,
+    "group": "Lácteos", "fat": 11.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ricotta semidescremada",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 4,
+    "group": "Lácteos", "fat": 11.7,
+    "cholesterol": 0
+  },
+  {
+    "name": "Yogur descremado",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 5.9,
+    "group": "Lácteos", "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Yogur descremado bebible",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 4.1,
+    "group": "Lácteos", "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Yogur descremado fortificado con Ca",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 7.1,
+    "group": "Lácteos", "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Yogur entero bebible",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 12.7,
+    "group": "Lácteos", "fat": 2.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Yogur entero natural",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 5.3,
+    "group": "Lácteos", "fat": 3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Yogur entero saborizado",
+    "calories": 0,
+    "proteins": 0,
+    "carbohidrates": 12.4,
+    "group": "Lácteos", "fat": 2.4,
+    "cholesterol": 0
+  },
+  {
+    "name": "Huevo de codorniz, entero, crudo",
+    "calories": 174,
+    "proteins": 13.6,
+    "carbohidrates": 0.1,
+    "group": "Huevos",
+    "fat": 13.3,
+    "cholesterol": 430
+  },
+  {
+    "name": "Huevo de gallina, clara, cocido",
+    "calories": 54,
+    "proteins": 12.8,
+    "carbohidrates": 0,
+    "group": "Huevos",
+    "fat": 0.3,
+    "cholesterol": 0
+  },
+  {
+    "name": "Huevo de gallina, clara, cruda",
+    "calories": 48,
+    "proteins": 11.6,
+    "carbohidrates": 0,
+    "group": "Huevos",
+    "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Huevo de gallina, entero, crudo",
+    "calories": 156,
+    "proteins": 12,
+    "carbohidrates": 0.4,
+    "group": "Huevos",
+    "fat": 11.8,
+    "cholesterol": 449
+  },
+  {
+    "name": "Huevo de gallina, frito",
+    "calories": 196,
+    "proteins": 16.3,
+    "carbohidrates": 0,
+    "group": "Huevos", "fat": 14.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Huevo de gallina, poché",
+    "calories": 152,
+    "proteins": 13.4,
+    "carbohidrates": 0,
+    "group": "Huevos",
+    "fat": 10.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Huevo de gallina, yema, cruda",
+    "calories": 325,
+    "proteins": 16.6,
+    "carbohidrates": 0,
+    "group": "Huevos",
+    "fat": 28.7,
+    "cholesterol": 1315
+  },
+  {
+    "name": "Batata, dulce",
+    "calories": 263,
+    "proteins": 0.9,
+    "carbohidrates": 65,
+    "group": "Dulces",
+    "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Chocolatín",
+    "calories": 549,
+    "proteins": 5.4,
+    "carbohidrates": 62.4,
+    "group": "Dulces", "fat": 31.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Ciruela, mermelada",
+    "calories": 306,
+    "proteins": 3.7,
+    "carbohidrates": 73.1,
+    "group": "Dulces", "fat": 0.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Dulce de Leche Light",
+    "calories": 260,
+    "proteins": 6.2,
+    "carbohidrates": 52.9,
+    "group": "Dulces",
+    "fat": 1.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Dulce de leche",
+    "calories": 314,
+    "proteins": 6.5,
+    "carbohidrates": 57.4,
+    "group": "Dulces", "fat": 6.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Dulce de leche para reposteria",
+    "calories": 317,
+    "proteins": 7.3,
+    "carbohidrates": 55,
+    "group": "Dulces",
+    "fat": 7.5,
+    "cholesterol": 0
+  },
+  {
+    "name": "Dulce de leche repostero suelto",
+    "calories": 337,
+    "proteins": 5.3,
+    "carbohidrates": 7.9,
+    "group": "Dulces",
+    "fat": 7.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Durazno, mermelada",
+    "calories": 304,
+    "proteins": 3.5,
+    "carbohidrates": 76.4,
+    "group": "Dulces", "fat": 0.1,
+    "cholesterol": 0
+  },
+  {
+    "name": "Frutilla, mermelada",
+    "calories": 309,
+    "proteins": 3.8,
+    "carbohidrates": 73.2,
+    "group": "Dulces", "fat": 0.6,
+    "cholesterol": 0
+  },
+  {
+    "name": "Leche, dulce de leche",
+    "calories": 341,
+    "proteins": 8.1,
+    "carbohidrates": 56.8,
+    "group": "Dulces",
+    "fat": 9,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mayonesa Ri-k",
+    "calories": 723,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Otros", "fat": 79,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mayonesa reducida en calories",
+    "calories": 320,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Otros", "fat": 32,
+    "cholesterol": 0
+  },
+  {
+    "name": "Mortadela",
+    "calories": 245,
+    "proteins": 17.5,
+    "carbohidrates": 1,
+    "group": "Otros",
+    "fat": 19,
+    "cholesterol": 0
+  },
+  {
+    "name": "Polen de Totora",
+    "calories": 288,
+    "proteins": 14.2,
+    "carbohidrates": 60.8,
+    "group": "Otros",
+    "fat": 3.2,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite comestible mezcla Lira, 85% girasol, 15% oliva",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite comestible mezcla Patito, 94% girasol, 6% maiz",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite de canola",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite de girasol Familiar",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite de girasol Ideal",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite de girasol Natura",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite de maiz Arcor",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite de maiz Cocinero",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite de maiz Mazzola",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite de oliva Cocinero",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "Aceite de uva Cocinero",
+    "calories": 900,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 100,
+    "cholesterol": 0
+  },
+  {
+    "name": "fat Vacuna",
+    "calories": 899,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 99.9,
+    "cholesterol": 0
+  },
+  {
+    "name": "fat de cerdo",
+    "calories": 898,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 99.8,
+    "cholesterol": 0
+  },
+  {
+    "name": "Margarina 100% vegetal Delicia",
+    "calories": 747,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 83,
+    "cholesterol": 0
+  },
+  {
+    "name": "Margarina 100% vegetal Manty (en pote y en pan)",
+    "calories": 747,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 83,
+    "cholesterol": 0
+  },
+  {
+    "name": "Margarina reducida en calorias Manty liviana",
+    "calories": 504,
+    "proteins": 0,
+    "carbohidrates": 0,
+    "group": "Grasas",
+    "fat": 56,
+    "cholesterol": 0
+  }
+]
