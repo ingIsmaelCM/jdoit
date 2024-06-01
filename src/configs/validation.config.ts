@@ -1,15 +1,27 @@
 export default {
-  isRequired: (field: string) => ({
-    message: `El campo ${field} es obligatorio`
+  isRequired: () => ({
+    message: `El campo $property es obligatorio`
   }),
-  isEmail: (field: string) => ({
-    message: `El campo ${field} debe ser un correo`
+  isEmail: () => ({
+    message: `El campo $property debe ser un correo`
   }),
-  isEnum: (field: string, values: object) => ({
-    message: `El campo ${field} debe ser estar entre ${Object.values(values)}`
+  isEnum: (options: any[]) => ({
+    message: `El campo $property debe ser estar entre ${options.join(', ')}`
   }),
-  isLength: (field: string, min: number, max: number) => ({
-    message: `El campo ${field} debe estar entre ${min} y ${max}`
+  isLength: () => ({
+    message: `El campo $property debe estar entre $constraint1 y $constraint2 `
   }),
+  isMin:()=>({
+    message: `El campo $property debe ser mayor o igual a $constraint1`
+  }),
+  isMax:()=>({
+    message: `El campo $property debe ser menor o igual a $constraint1`
+  }),
+  isRegex:()=>({
+    message: `El campo $property no cumple con el patrón requerido`
+  }),
+  isNumberString:()=>({
+    message: `El campo $property debe ser un número válido`
+  })
 
 };

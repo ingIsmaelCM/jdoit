@@ -1,9 +1,11 @@
-import { Controller, Get, Param, Post, Query } from "@nestjs/common";
+import { Controller, Delete, Get, Param, Patch, Post, Put, Query, Req } from "@nestjs/common";
 import { IParams } from "@/utils/interfaces";
 import FoodService from "@/services/food.service";
 import { ApiBody, ApiCookieAuth, ApiTags } from "@nestjs/swagger";
-import { CreateFoodDto } from "@/validators/food.validator";
+import { CreateFoodDto, UpdateFoodDto } from "@/validators/food.validator";
 import { Author } from "@/decorators/author.decorator";
+import { Request } from "express";
+import VenomService from "@/services/venom.service";
 
 @ApiTags("Foods")
 @ApiCookieAuth("jwt")
@@ -14,7 +16,7 @@ export default class FoodController {
   }
 
   @Get()
-  async getFoods(@Query() params: IParams) {
+  async getFoods(@Query() params: IParams, @Req() req: Request) {
     return this.foodService.getFoods(params);
   }
 
@@ -28,7 +30,25 @@ export default class FoodController {
     type: CreateFoodDto
   })
   @Post()
-  async  createFood(@Author() foodData: CreateFoodDto){
+  async createFood(@Author() foodData: CreateFoodDto) {
     return this.foodService.createFood(foodData);
+  }
+
+  @ApiBody({
+    type: UpdateFoodDto
+  })
+  @Put(":id")
+  async updateFood(@Param("id") id: string, @Author() foodData: UpdateFoodDto) {
+    return this.foodService.updateFood(id, foodData);
+  }
+
+  @Delete(":id")
+  async deleteFood(@Param("id") id: string) {
+    return this.foodService.deleteFood(id);
+  }
+
+  @Patch(":id")
+  async restoreFood(@Param("id") id: string) {
+    return this.foodService.restoreFood(id);
   }
 }

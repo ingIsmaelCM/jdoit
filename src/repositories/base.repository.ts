@@ -85,11 +85,11 @@ export class BaseRepository<T extends Model> {
     });
   }
 
-  public async create(data: any, trans: any): Promise<T> {
+  public async create(data: any, trans?: Transaction): Promise<T> {
     return this.safeRun(() => this.model.create(data, {transaction: trans}));
   }
 
-  public async updateOrCreate(data: any, trans: any): Promise<T> {
+  public async updateOrCreate(data: any, trans?: Transaction): Promise<T> {
     const newData = await this.safeRun(() => this.model.upsert(data, {
       transaction: trans,
 
@@ -106,7 +106,7 @@ export class BaseRepository<T extends Model> {
   public async update(
     data: any,
     primaryKey: string | number,
-    trans: any,
+    trans?: Transaction,
     key?: string
   ): Promise<T> {
     return this.safeRun(async () => {
@@ -123,7 +123,7 @@ export class BaseRepository<T extends Model> {
     });
   }
 
-  public async delete(primaryKey: string | number, trans: any): Promise<T> {
+  public async delete(primaryKey: string | number, trans?: Transaction): Promise<T> {
     return this.safeRun(async () => {
       const dataToDelete = await this.find(this.primaryKeyName, primaryKey);
       if (dataToDelete) {
@@ -158,7 +158,7 @@ export class BaseRepository<T extends Model> {
     })
   }
 
-  public async restore(primaryKey: string | number, trans: any): Promise<T> {
+  public async restore(primaryKey: string | number, trans?: Transaction): Promise<T> {
     return this.safeRun(async () => {
       const dataToRestore = await this.find(
         this.primaryKeyName,
@@ -171,7 +171,7 @@ export class BaseRepository<T extends Model> {
 
   public async forceDelete(
     primaryKey: string | number,
-    trans: any
+    trans?: Transaction
   ): Promise<T> {
     return this.safeRun(async () => {
       const dataToForceDelete = await this.find(

@@ -5,7 +5,7 @@ import { appConfig, authConfig } from "@/configs";
 import { INestApplication, ValidationPipe } from "@nestjs/common";
 import * as cookieParser from "cookie-parser";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
-import {version} from "../package.json"
+import { version } from "../package.json";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -13,6 +13,8 @@ async function bootstrap() {
   app.setGlobalPrefix("api");
   app.useGlobalPipes(new ValidationPipe({
     validateCustomDecorators: true,
+    stopAtFirstError: true,
+    transform: true
   }));
   app.use(cookieParser(String(appConfig.key)));
   configSwagger(app);
@@ -28,8 +30,8 @@ function configSwagger(app: INestApplication) {
     .setVersion(version)
     .addCookieAuth(authConfig.jwtCookieName)
     .build();
-  const document=SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup("api/doc",app, document);
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup("api/doc", app, document);
 
 }
 

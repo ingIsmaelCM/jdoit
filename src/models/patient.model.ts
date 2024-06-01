@@ -1,13 +1,19 @@
-import { Column, DataType, HasMany, Table } from "sequelize-typescript";
+import { AfterCreate, BelongsToMany, Column, DataType, HasMany, Table } from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
 import { ICommonField } from "@/utils/interfaces";
 import tools from "@/utils/tools";
-import InfoModel, { EInfoType } from "@/models/info.model";
+import InfoModel, { EInfoType, IInfo } from "@/models/info.model";
+import PlanModel, { IPlan } from "@/models/plan.model";
+import AddressModel, { IAddress } from "@/models/address.model";
+import { count } from "rxjs";
 
 export interface IPatient extends ICommonField {
   name: string;
   lastname: string;
   fullname: string;
+  plans: IPlan[];
+  info: IInfo;
+  code: string;
 }
 
 
@@ -18,7 +24,7 @@ export interface IPatient extends ICommonField {
     { fields: ["name", "lastname"], type: "FULLTEXT" }
   ]
 })
-export default class PatientModel extends ModelBase {
+export default class PatientModel extends ModelBase implements IPatient {
 
   @Column({
     type: DataType.STRING(75),
@@ -36,6 +42,11 @@ export default class PatientModel extends ModelBase {
     this.setDataValue("lastname", tools.initialToUpper(value));
   }
 
+  @Column({
+    type: DataType.STRING(20),
+    allowNull: true
+  })
+  code: string;
 
   @Column({
     type: DataType.VIRTUAL(DataType.STRING)
@@ -50,7 +61,32 @@ export default class PatientModel extends ModelBase {
       infoType: EInfoType.Patient
     }
   })
-  info: InfoModel;
+  info: IInfo;
+
+  @BelongsToMany(() => AddressModel, {
+    through: () => InfoModel,
+    foreignKey: "infoId",
+    targetKey: "id",
+    otherKey: "addressId",
+    scope: {
+      infoType: EInfoType.Patient
+    }
+
+  })
+  address: IAddress;
+
+  @HasMany(() => PlanModel, {
+    foreignKey: "patientId"
+  })
+  plans: IPlan[];
+
+  @AfterCreate
+  static createCode(instance: PatientModel) {
+    PatientModel.count({ paranoid: false }).then((count: number) => {
+      const code = String(count+1).padStart(5, "0");
+      instance.update({ code: code }).then();
+    });
+  }
 
 
 }

@@ -7,9 +7,16 @@ export default class SequelizeConnection {
   public connection: Sequelize;
 
   private constructor() {
-    this.connection = new Sequelize(databaseConfig);
-    if (appConfig.env === "dev") {
-      this.connection.sync({ alter: true });
+    try {
+      this.connection = new Sequelize(databaseConfig);
+      if (appConfig.env === "dev") {
+        this.connection.sync({ alter: true,  })
+          .then(() => console.log("Models has been sync")).catch((e: any) => {
+          console.log(e);
+        });
+      }
+    } catch (e: any) {
+      throw e;
     }
   }
 

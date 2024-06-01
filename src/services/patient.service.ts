@@ -5,27 +5,35 @@ import BaseService from "@/services/base.service";
 import { Transaction } from "sequelize";
 import PatientModel from "@/models/patient.model";
 import { IParams } from "@/utils/interfaces";
+import PatientViewRepository from "@/repositories/patientview.repository";
+import { IInfo } from "@/models/info.model";
 
 @Injectable()
 export class PatientService extends BaseService {
 
-  constructor(private readonly patientRepo: PatientRepository) {
+  constructor(private readonly patientRepo: PatientRepository,
+              private readonly patientViewRepo: PatientViewRepository) {
     super();
   }
 
   async getPatients(params: IParams): Promise<PatientModel[]> {
-
-    return await this.patientRepo.getAll(params);
+    return await this.patientViewRepo.getAll(params);
   }
 
   async findPatient(patientId: string, params: IParams): Promise<PatientModel> {
-    return await this.patientRepo.findById(patientId, params);
+    return await this.patientViewRepo.findById(patientId, params);
   }
 
   async createPatient(data: CreatePatientDto): Promise<PatientModel> {
-    return await this.runWithTrans(async (trans: Transaction) =>
-      await this.patientRepo.create({ ...data, info:data }, trans)
-    );
+    return await this.runWithTrans(async (trans: Transaction) => {
+        const info: any = { ...data };
+        if (data.line1) {
+          info.address = { ...data };
+        }
+        return await this.patientRepo.create({ ...data, info: info }, trans);
+      }
+    )
+      ;
   }
 
   async updatePatient(data: UpdatePatientDto, patientId: string): Promise<PatientModel> {

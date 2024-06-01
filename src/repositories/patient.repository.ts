@@ -3,6 +3,8 @@ import PatientModel from "@/models/patient.model";
 import InfoModel from "@/models/info.model";
 import { Sequelize } from "sequelize-typescript";
 import InfoRepository from "@/repositories/info.repository";
+import AddressModel from "@/models/address.model";
+import AddressRepository from "@/repositories/address.repository";
 
 export default class PatientRepository extends BaseRepository<PatientModel> {
   constructor() {
@@ -10,8 +12,17 @@ export default class PatientRepository extends BaseRepository<PatientModel> {
   }
 
   public async create(data: any, trans: any): Promise<PatientModel> {
-    return this.safeRun(() => PatientModel.create(data, { transaction: trans, include: InfoModel }));
+    return this.safeRun(() => PatientModel.create(data,
+      {
+        transaction: trans, include: [
+          {
+            model: InfoModel,
+            include: [AddressModel]
+          }
+        ]
+      }));
   }
+
 
   public async update(
     data: any,
@@ -19,7 +30,10 @@ export default class PatientRepository extends BaseRepository<PatientModel> {
     trans: any,
     key?: string
   ): Promise<PatientModel> {
-    await new InfoRepository().update(data, data.info_Id, trans, key);
+    await new InfoRepository().update(data, data.infoModelId, trans, key);
+    if(data.line1){
+      await new AddressRepository().update(data, data.addressId, trans, key)
+    }
     return super.update(data, primaryKey, trans, key);
   }
 }

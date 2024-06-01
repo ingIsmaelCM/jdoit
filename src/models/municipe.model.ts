@@ -1,14 +1,14 @@
 import { BelongsTo, Column, DataType, Table } from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
 import { ICommonField } from "@/utils/interfaces";
-import ProvinceModel from "@/models/province.model";
+import ProvinceModel, { IProvince } from "@/models/province.model";
 
 
 export interface IMunicipe extends ICommonField {
   name: string;
   code: string;
   provinceId: string;
-  province: ProvinceModel
+  province: IProvince
 }
 
 @Table({
@@ -44,5 +44,5 @@ export default class MunicipeModel extends ModelBase implements IMunicipe {
   @BelongsTo(() => ProvinceModel, {
     foreignKey: "provinceId"
   })
-  province: ProvinceModel;
+  province: IProvince;
 }

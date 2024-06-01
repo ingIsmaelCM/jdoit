@@ -18,7 +18,6 @@ export default class VenomService {
     }).then((client) => {
       start(client);
       VenomService.clients.set(userId, client);
-      this.client = client;
     });
 
   }
@@ -31,28 +30,7 @@ export default class VenomService {
   }
 
 }
-const list = [
-  {
-    title: "Pasta",
-    rows: [
-      {
-        title: "Ravioli Lasagna",
-        description: "Made with layers of frozen cheese",
-      }
-    ]
-  }
-];
+
 const start =  (client: Whatsapp) => {
-  client.onMessage( (message: Message) => {
-    if (message.body.toLowerCase() === "hi" && message.isGroupMsg === false) {
-       client
-        .sendListMenu(message.from, "Opciones","Despliegue la lista","Lista","Menú", list)
-        .then((result) => {
-          console.log("Result: ", result); //return object success
-        })
-        .catch((erro) => {
-          console.error("Error when sending: ", erro); //return object error
-        });
-    }
-  }).then();
+
 };

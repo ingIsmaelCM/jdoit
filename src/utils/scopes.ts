@@ -64,7 +64,7 @@ class Scope {
         }
     }
 
-    //Filter format filed:value:union
+    //Filter format field:value:union
 
     isLike(filter: string, cols: Array<string>): Record<string, any>  {
         const [field = "", value = "", union = "and"] = filter.split(":");
@@ -73,7 +73,23 @@ class Scope {
         cols.push("createdBy", "updatedBy");
         if (cols.includes(field)) {
             condition = {
-                [field]: {[this.operators["like"]]: `${value}`}, //field:op:value1,value2:conjunc
+                [field]: {[this.operators["like"]]: `${value}`},
+            };
+        }
+        return {
+            union: union,
+            condition,
+        };
+    }
+
+    isNotLike(filter: string, cols: Array<string>): Record<string, any>  {
+        const [field = "", value = "", union = "and"] = filter.split(":");
+        let condition: any = {};
+
+        cols.push("createdBy", "updatedBy");
+        if (cols.includes(field)) {
+            condition = {
+                [field]: {[this.operators["notlike"]]: `${value}`},
             };
         }
         return {
@@ -265,11 +281,18 @@ class Scope {
 
         };
         const like: any = params.like ? this.isLike(params.like, cols) : null;
+        const notLike: any = params.notlike ? this.isNotLike(params.notlike, cols) : null;
         const filter: any = params.filter ? this.filter(params.filter, cols) : {};
         if (like) {
             filter[this.operators[like.union]] = [
                 ...(filter[this.operators[like.union]] || []),
                 like.condition,
+            ];
+        }
+        if (notLike) {
+            filter[this.operators[notLike.union]] = [
+                ...(filter[this.operators[notLike.union]] || []),
+                notLike.condition,
             ];
         }
         const searchables = Object.entries(model.getAttributes())

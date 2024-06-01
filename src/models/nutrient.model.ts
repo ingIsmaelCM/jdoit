@@ -1,17 +1,15 @@
 import { BelongsTo, Column, DataType, ForeignKey, Table } from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
-import MeasureModel from "@/models/measure.model";
 import { ICommonField } from "@/utils/interfaces";
 
 
 export interface INutrient extends  ICommonField{
-  cant: number;
+  portion: string;
   calories: number;
   proteins: number;
   carbohidrates: number;
   fat: number;
   cholesterol: number;
-  measureId: string;
 }
 
 @Table({
@@ -22,10 +20,13 @@ export interface INutrient extends  ICommonField{
 export default class NutrientModel extends ModelBase implements INutrient {
 
   @Column({
-    type: DataType.DECIMAL(6, 2),
-    allowNull: false
+    type: DataType.STRING(20),
+    allowNull: false,
+    defaultValue: "100g"
   })
-  cant: number;
+  set portion(value: string){
+    this.setDataValue("portion", value.toLowerCase().replace(/ /gi,""))
+  }
 
   @Column({
     type: DataType.DECIMAL(6, 2),
@@ -64,15 +65,5 @@ export default class NutrientModel extends ModelBase implements INutrient {
   })
   cholesterol: number;
 
-  @ForeignKey(() => MeasureModel)
-  @Column({
-    type: DataType.STRING(75),
-    allowNull: false
-  })
-  measureId: string;
 
-  @BelongsTo(() => MeasureModel, {
-    foreignKey: "measureId"
-  })
-  measure: MeasureModel;
 }

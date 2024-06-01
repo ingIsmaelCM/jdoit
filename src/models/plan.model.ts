@@ -1,10 +1,10 @@
 import ModelBase from "@/models/model.base";
-import { BelongsTo, BelongsToMany, Column, DataType, ForeignKey, Table } from "sequelize-typescript";
-import NutrientModel from "@/models/nutrient.model";
-import PatientModel from "@/models/patient.model";
+import { BelongsTo, BelongsToMany, Column, DataType, ForeignKey, HasMany, Table } from "sequelize-typescript";
+import NutrientModel, { INutrient } from "@/models/nutrient.model";
+import PatientModel, { IPatient } from "@/models/patient.model";
 import { ICommonField } from "@/utils/interfaces";
-import PlanFoodModel from "@/models/plan-food.model";
-import FoodModel from "@/models/food.model";
+import PlanFoodModel, { IPlanFood } from "@/models/plan-food.model";
+import FoodModel, { IFood } from "@/models/food.model";
 
 export interface IPlan extends ICommonField {
   type: EPlanType,
@@ -12,6 +12,10 @@ export interface IPlan extends ICommonField {
   nutrientId: string;
   patientId: string;
   note: string;
+  patient: IPatient;
+  nutrient: INutrient;
+  foods: IFood[],
+  foodPlan: IPlanFood[]
 }
 
 export enum EPlanType {
@@ -23,12 +27,13 @@ export enum EPlanType {
 }
 
 export enum EPlanDay {
-  Lunes = "Lunes",
-  Martes = "Martes",
-  Miercoles = "Miércoles",
-  Jueves = "Jueves",
-  Viernes = "Viernes",
-  Sabado = "Sábado"
+  L = "Lunes",
+  M = "Martes",
+  X = "Miércoles",
+  J = "Jueves",
+  V = "Viernes",
+  S = "Sábado",
+  D="Domingo"
 }
 
 @Table({
@@ -54,7 +59,7 @@ export default class PlanModel extends ModelBase implements IPlan {
   day: EPlanDay;
 
   @Column({
-    type: DataType.STRING(250),
+    type: DataType.TEXT("long"),
     allowNull: true
   })
   note: string;
@@ -76,17 +81,31 @@ export default class PlanModel extends ModelBase implements IPlan {
   @BelongsTo(() => NutrientModel, {
     foreignKey: "nutrientId"
   })
-  nutrient: NutrientModel;
+  nutrient: INutrient;
 
   @BelongsTo(() => PatientModel, {
     foreignKey: "patientId"
   })
-  patient: PatientModel;
+  patient: IPatient;
 
   @BelongsToMany(() => FoodModel, {
     foreignKey: "foodId",
     through: () => PlanFoodModel
   })
-  foods: FoodModel[];
+  foods: IFood[];
+
+  @HasMany(()=>PlanFoodModel,{
+    foreignKey: "planId"
+  })
+  foodPlan: IPlanFood[]
+
+
+  static  getSearchables():Array<keyof IPlan>{
+    return ["day","type"]
+  }
+
+  static  getRelations(){
+    return ["nutrient","patient","foodPlan","foodPlan.food","foodPlan.food.nutrient",]
+  }
 
 }

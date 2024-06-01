@@ -11,6 +11,9 @@ const databaseConfig: SequelizeOptions = {
   port: Number(process.env.DATABASE_PORT || "3306"),
   logging: false,
   timezone: process.env.DATABASE_TIMEZONE||'-04:00',
-  models:[path.resolve(__dirname, "../**/*.model.*"), path.resolve(__dirname, "../**/*.view.*")]
+  models:[path.resolve(__dirname, "../**/*.model.*"), path.resolve(__dirname, "../**/*.view.*")],
+  dialectOptions:{
+
+  }
 };
 export default databaseConfig;

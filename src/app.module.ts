@@ -9,11 +9,26 @@ import { JwtAuthStrategy } from "@/services/auth/jwt-auth.strategy";
 import { PatientModule } from "@/modules/patient.module";
 import FoodModule from "@/modules/food.module";
 import ProvinceModule from "@/modules/province.module";
+import { CacheModule } from "@nestjs/cache-manager";
+import { ScheduleModule } from "@nestjs/schedule";
+import CategoryModule from "@/modules/category.module";
+import PlanModule from "@/modules/plan.module";
+import EventModule from "@/modules/event.module";
+import { BullModule } from "@nestjs/bull";
 
 
 @Module({
   imports: [
-    UserModule, AuthModule, PatientModule, FoodModule, ProvinceModule
+    ScheduleModule.forRoot(),
+    BullModule.forRoot({
+      redis: {
+        host: 'redis-12502.c309.us-east-2-1.ec2.redns.redis-cloud.com:',
+        port: 12502,
+      },
+    }),
+    CacheModule.register(),
+    UserModule, AuthModule, PatientModule, FoodModule, ProvinceModule,
+    CategoryModule, PlanModule, EventModule
   ],
   controllers: [AppController],
 
@@ -22,7 +37,7 @@ import ProvinceModule from "@/modules/province.module";
       provide: APP_GUARD,
       useClass: JwtGuard
     },
-    JwtAuthStrategy,
+    JwtAuthStrategy
   ]
 })
 export class AppModule {

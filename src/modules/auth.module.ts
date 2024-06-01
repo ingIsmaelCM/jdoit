@@ -6,11 +6,15 @@ import { AuthController } from "@/controllers/auth.controller";
 import { AuthService } from "@/services/auth/auth.service";
 import { LocalAuthStrategy } from "@/services/auth/local-auth.strategy";
 import { JwtAuthStrategy } from "@/services/auth/jwt-auth.strategy";
+import { CacheModule } from "@nestjs/cache-manager";
+import FoodRepository from "@/repositories/food.repository";
+import FoodModule from "@/modules/food.module";
+import NutrientRepository from "@/repositories/nutrient.repository";
 
 
 @Module({
   imports: [
-    UserModule,
+    UserModule, FoodModule,
     JwtModule.register({
       secret: String(appConfig.key),
       signOptions: {
@@ -19,7 +23,7 @@ import { JwtAuthStrategy } from "@/services/auth/jwt-auth.strategy";
     })
   ],
   controllers: [AuthController],
-  providers: [AuthService, LocalAuthStrategy, JwtAuthStrategy],
+  providers: [AuthService, LocalAuthStrategy, JwtAuthStrategy, FoodRepository, NutrientRepository],
   exports: [AuthService, JwtModule]
 })
 

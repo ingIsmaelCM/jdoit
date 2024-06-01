@@ -3,7 +3,7 @@ import {
   BeforeUpdate,
   BelongsTo,
   Column,
-  DataType,
+  DataType, ForeignKey,
   IsUUID,
   Model,
   PrimaryKey,
@@ -14,7 +14,7 @@ import tools from "@/utils/tools";
 import { ICommonField } from "@/utils/interfaces";
 import { Op } from "sequelize";
 import { HttpException, HttpStatus } from "@nestjs/common";
-import AddressModel from "@/models/address.model";
+import AddressModel, { IAddress } from "@/models/address.model";
 
 export interface IInfo extends ICommonField {
   email: string;
@@ -25,6 +25,7 @@ export interface IInfo extends ICommonField {
   infoId: string;
   note: string;
   addressId: string;
+  address: IAddress;
 }
 
 export enum EInfoGender {
@@ -55,7 +56,7 @@ export default class InfoModel extends ModelBase implements IInfo {
     allowNull: true
   })
   set email(value: string) {
-    this.setDataValue("email", value.toLowerCase());
+    value && this.setDataValue("email", value.toLowerCase());
   }
 
   @Column({
@@ -95,6 +96,7 @@ export default class InfoModel extends ModelBase implements IInfo {
   })
   note: string;
 
+  @ForeignKey(() => AddressModel)
   @Column({
     type: DataType.STRING(75),
     allowNull: true
@@ -104,7 +106,7 @@ export default class InfoModel extends ModelBase implements IInfo {
   @BelongsTo(() => AddressModel, {
     foreignKey: "addressId"
   })
-  address: AddressModel;
+  address: IAddress;
 
   @BeforeCreate
   @BeforeUpdate

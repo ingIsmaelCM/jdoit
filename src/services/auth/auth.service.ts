@@ -1,17 +1,22 @@
-import { BadRequestException, Injectable } from "@nestjs/common";
+import { BadRequestException, Inject, Injectable } from "@nestjs/common";
 import UserRepository from "@/repositories/user.repository";
 import { JwtService } from "@nestjs/jwt";
-import UserModel, { IUser } from "@/models/user.model";
+import UserModel from "@/models/user.model";
 import * as bcrypt from "bcrypt";
 import { AuthLoginDto, AuthRegisterDto } from "@/validators/auth.validator";
 import SequelizeConnection from "@/database/sequelize.connection";
 import { authConfig } from "@/configs";
 import VenomService from "@/services/venom.service";
+import { CACHE_MANAGER, Cache } from "@nestjs/cache-manager";
+import FoodRepository from "@/repositories/food.repository";
 
 
 @Injectable()
 export class AuthService {
-  constructor(private readonly userRepo: UserRepository, private readonly jwtService: JwtService) {
+  constructor(@Inject(CACHE_MANAGER) private readonly cacheManager: Cache,
+              private readonly foodRepo: FoodRepository,
+              private readonly userRepo: UserRepository,
+              private readonly jwtService: JwtService) {
 
   }
 
@@ -31,8 +36,11 @@ export class AuthService {
   async login(userData: AuthLoginDto): Promise<any> {
     const user = await this.validateUser(userData);
     const payload = { user: user, id: user.id };
-    VenomService.getClient(user.id);
-    return { [authConfig.jwtCookieName]: this.jwtService.sign(payload), user };
+    //VenomService.getClient(user.id);
+    this.foodRepo.getAll({}).then((foods: any) => {
+      this.cacheManager.set("foods", JSON.stringify(foods));
+    });
+    return { [authConfig.jwtCookieName]: this.jwtService.sign(payload), user, title: "Sesión iniciada" };
   }
 
   async register(userData: AuthRegisterDto): Promise<any> {

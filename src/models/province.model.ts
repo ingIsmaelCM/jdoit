@@ -1,13 +1,13 @@
 import { Column, DataType, HasMany, Table } from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
 import { ICommonField } from "@/utils/interfaces";
-import MunicipeModel from "@/models/municipe.model";
+import MunicipeModel, { IMunicipe } from "@/models/municipe.model";
 
 
 export interface IProvince extends ICommonField {
   name: string;
   code: string;
-  municipes: MunicipeModel[]
+  municipes: IMunicipe[]
 }
 
 @Table({
@@ -36,7 +36,7 @@ export default class ProvinceModel extends ModelBase implements IProvince {
   @HasMany(() => MunicipeModel, {
     foreignKey: "provinceId"
   })
-  municipes: MunicipeModel[];
+  municipes: IMunicipe[];
 
   static getSearchables(): Array<keyof  IProvince> {
     return ["name","code"];

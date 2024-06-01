@@ -1,13 +1,19 @@
-import { Column, DataType, Table } from "sequelize-typescript";
+import { Column, DataType, HasMany, Table } from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
 import tools from "@/utils/tools";
+import { ICommonField } from "@/utils/interfaces";
+import FoodModel, { IFood } from "@/models/food.model";
 
+export interface ICategory extends ICommonField {
+  name: string;
+  foods: IFood[];
+}
 
 @Table({
   tableName: "categories",
   paranoid: true,
   indexes: [
-    { fields: ["name"], type: "FULLTEXT", unique: true }
+    { fields: ["name"], unique: true }
   ]
 })
 export default class CategoryModel extends ModelBase {
@@ -19,7 +25,12 @@ export default class CategoryModel extends ModelBase {
     this.setDataValue("name", tools.initialToUpper(value));
   }
 
-  static  getSearchables():string[]{
-    return ["name"]
+  @HasMany(() => FoodModel, {
+    foreignKey: "categoryId"
+  })
+  foods: IFood[];
+
+  static getSearchables(): string[] {
+    return ["name"];
   }
 }

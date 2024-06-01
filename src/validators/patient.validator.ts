@@ -6,36 +6,36 @@ import { CreateInfoDto, UpdateInfoDto } from "@/validators/info.validator";
 
 
 export class CreatePatientDto extends CreateInfoDto {
-  @IsNotEmpty(validationConfig.isRequired("name"))
-  @Length(2, 75, validationConfig.isLength("name", 2, 75))
+  @IsNotEmpty(validationConfig.isRequired())
+  @Length(2, 75, validationConfig.isLength())
   @ApiProperty({minimum: 2, maximum: 75})
   name: string;
 
-  @IsNotEmpty(validationConfig.isRequired("lastname"))
-  @Length(2, 75, validationConfig.isLength("lastname", 2, 75))
+  @IsNotEmpty(validationConfig.isRequired())
+  @Length(2, 75, validationConfig.isLength())
   @ApiProperty({minimum: 2, maximum: 75})
   lastname: string;
 
-  @IsNotEmpty(validationConfig.isRequired("createdBy"))
+  @IsNotEmpty(validationConfig.isRequired())
   createdBy: string;
 
-  @IsNotEmpty(validationConfig.isRequired("updatedBy"))
+  @IsNotEmpty(validationConfig.isRequired())
   updatedBy: string;
 
 }
 
 export class UpdatePatientDto extends UpdateInfoDto implements Partial<IPatient> {
   @IsOptional()
-  @Length(2, 75, validationConfig.isLength("name", 2, 75))
+  @Length(2, 75, validationConfig.isLength())
   @ApiProperty()
   name: string;
 
   @IsOptional()
-  @Length(2, 75, validationConfig.isLength("lastname", 2, 75))
+  @Length(2, 75, validationConfig.isLength())
   @ApiProperty()
   lastname: string;
 
-  @IsNotEmpty(validationConfig.isRequired("updatedBy"))
+  @IsNotEmpty(validationConfig.isRequired())
   updatedBy: string;
 
 }

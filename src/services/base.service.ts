@@ -11,6 +11,7 @@ export default class BaseService {
       await trans.commit();
       return res;
     } catch (e: any) {
+      console.log(e)
       await trans.rollback();
       throw e;
     }

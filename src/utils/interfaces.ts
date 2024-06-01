@@ -15,6 +15,7 @@ export interface IParams {
   isNull?: string;
   notNUll?: string;
   like?: string;
+  notlike?: string;
   operation?: string;
 }
 
