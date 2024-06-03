@@ -15,20 +15,15 @@ import CategoryModule from "@/modules/category.module";
 import PlanModule from "@/modules/plan.module";
 import EventModule from "@/modules/event.module";
 import { BullModule } from "@nestjs/bull";
+import EvalModule from "@/modules/eval.module";
 
 
 @Module({
   imports: [
     ScheduleModule.forRoot(),
-    BullModule.forRoot({
-      redis: {
-        host: 'redis-12502.c309.us-east-2-1.ec2.redns.redis-cloud.com:',
-        port: 12502,
-      },
-    }),
     CacheModule.register(),
     UserModule, AuthModule, PatientModule, FoodModule, ProvinceModule,
-    CategoryModule, PlanModule, EventModule
+    CategoryModule, PlanModule, EventModule,     EvalModule,
   ],
   controllers: [AppController],
 

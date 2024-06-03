@@ -50,11 +50,11 @@ export default class PlanService extends BaseService {
           carbohidrates: data.carbohidrates,
           fat: data.fat,
           patientId: data.patientId,
-          foodPlan: [],
+          planfoods: [],
           note: data.notes[b.day]||null
         };
       }
-      a[b.day].foodPlan.push({
+      a[b.day].planfoods.push({
         ...b,
         createdBy: (<any>data).createdBy,
         updatedBy: (<any>data).updatedBy

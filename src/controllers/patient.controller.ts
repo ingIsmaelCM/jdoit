@@ -23,6 +23,11 @@ export default class PatientController {
     return this.patientService.findPatient(id, params);
   }
 
+  @Get(":id/plans")
+  async getPatientPlans(@Param("id") id: string) {
+    return this.patientService.getPatientPlans(id);
+  }
+
   @ApiBody({
     type: CreatePatientDto
   })

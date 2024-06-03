@@ -65,7 +65,6 @@ export default class FoodModel extends ModelBase implements IFood {
   })
   nutrientId: string;
 
-
   @BelongsTo(() => CategoryModel, {
     foreignKey: "categoryId"
   })
@@ -75,7 +74,6 @@ export default class FoodModel extends ModelBase implements IFood {
     foreignKey: "nutrientId"
   })
   nutrient: INutrient;
-
 
   @BelongsToMany(() => PlanModel, {
     foreignKey: "planId",
@@ -105,4 +103,5 @@ export default class FoodModel extends ModelBase implements IFood {
       planfoods.forEach((planfood: any) =>
         planfood.restore()));
   }
+  
 }

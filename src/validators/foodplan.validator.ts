@@ -49,5 +49,32 @@ export class UpdateFoodPlanDto implements Partial<IPlanFood> {
     maxLength: 75
   })
   foodId: string;
+}
+export class CreateFoodPlanDto implements Partial<IPlanFood> {
+
+  @Max(2.5, validationConfig.isMax())
+  @Min(0.5, validationConfig.isMin())
+  @IsNotEmpty(validationConfig.isRequired())
+  @ApiProperty({
+    minimum: 0.5,
+    maximum: 2.5
+  })
+  portion: number;
+
+  @MaxLength(75, validationConfig.isMax())
+  @MinLength(5, validationConfig.isMin())
+  @IsNotEmpty(validationConfig.isRequired())
+  @ApiProperty({
+    maxLength: 75
+  })
+  foodId: string;
+
+  @MaxLength(75, validationConfig.isMax())
+  @MinLength(5, validationConfig.isMin())
+  @IsNotEmpty(validationConfig.isRequired())
+  @ApiProperty({
+    maxLength: 75
+  })
+  planId: string;
 
 }

@@ -2,11 +2,10 @@ import { Injectable } from "@nestjs/common";
 import PatientRepository from "@/repositories/patient.repository";
 import { CreatePatientDto, UpdatePatientDto } from "@/validators/patient.validator";
 import BaseService from "@/services/base.service";
-import { Transaction } from "sequelize";
+import { col, fn, Transaction } from "sequelize";
 import PatientModel from "@/models/patient.model";
 import { IParams } from "@/utils/interfaces";
 import PatientViewRepository from "@/repositories/patientview.repository";
-import { IInfo } from "@/models/info.model";
 
 @Injectable()
 export class PatientService extends BaseService {
@@ -24,6 +23,17 @@ export class PatientService extends BaseService {
     return await this.patientViewRepo.findById(patientId, params);
   }
 
+  async getPatientPlans(patientId: string){
+    const  plans=await  this.patientViewRepo.getPlans(patientId);
+    return plans.map((plan: any)=>({
+     type: plan.type,
+      proteins: Number(plan.proteins).toFixed(2),
+      calories: Number(plan.calories).toFixed(2),
+      carbohidrates: Number(plan.carbohidrates).toFixed(2),
+      fat: Number(plan.fat).toFixed(2),
+      patientId: plan.patientId
+    }))
+  }
   async createPatient(data: CreatePatientDto): Promise<PatientModel> {
     return await this.runWithTrans(async (trans: Transaction) => {
         const info: any = { ...data };
@@ -50,4 +60,5 @@ export class PatientService extends BaseService {
     return await this.runWithTrans(async (trans: Transaction) =>
       await this.patientRepo.restore(patientId, trans));
   }
+
 }

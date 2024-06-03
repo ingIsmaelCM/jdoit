@@ -1,4 +1,12 @@
-import { BelongsTo, Column, DataType, ForeignKey, Table } from "sequelize-typescript";
+import {
+  BeforeBulkCreate,
+  BeforeBulkUpdate, BeforeCreate,
+  BelongsTo,
+  Column,
+  DataType,
+  ForeignKey,
+  Table
+} from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
 import { ICommonField } from "@/utils/interfaces";
 import PatientModel, { IPatient } from "@/models/patient.model";
@@ -6,20 +14,9 @@ import PatientModel, { IPatient } from "@/models/patient.model";
 export interface IEval extends ICommonField {
   weight: number;
   height: number;
-  cuello: number;
-  hombro: number;
-  pecho: number;
-  biceps: number;
-  triceps: number;
-  antebrazo: number;
-  cintura: number;
-  cadera: number;
-  gluteos: number;
-  pantorrilla: number;
-  femorales: number;
-  patientId: string;
+  imc: number;
   note: string;
-  patient: IPatient;
+  patientId: string;
 }
 
 @Table({
@@ -32,90 +29,26 @@ export default class EvalModel extends ModelBase implements IEval {
     type: DataType.DECIMAL(5, 2),
     allowNull: false
   })
-  weight: number;
+  get weight(): number {
+    return Number(this.getDataValue("weight"));
+  }
 
   @Column({
     type: DataType.DECIMAL(5, 2),
     allowNull: false
   })
-  height: number;
+  get height(): number {
+    return Number(this.getDataValue("height"));
+  }
 
   @Column({
     type: DataType.DECIMAL(5, 2),
     allowNull: false,
     defaultValue: 0
   })
-  cuello: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  hombro: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  pecho: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  biceps: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  triceps: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  antebrazo: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  cintura: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  cadera: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  gluteos: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  pantorrilla: number;
-
-  @Column({
-    type: DataType.DECIMAL(5, 2),
-    allowNull: false,
-    defaultValue: 0
-  })
-  femorales: number;
+  get imc(): number {
+    return Number(this.getDataValue("imc"));
+  }
 
 
   @Column({
@@ -136,5 +69,27 @@ export default class EvalModel extends ModelBase implements IEval {
     foreignKey: "patientId"
   })
   patient: IPatient;
+
+  @BeforeBulkUpdate
+  static setIMCOnUpdate(instance: any) {
+    const convertedHeight=(instance.attributes.height / 100);
+    const imc = instance.attributes.weight / (Math.pow(convertedHeight,2));
+    instance.attributes.imc=Number(imc.toFixed(1));
+  }
+
+  @BeforeCreate
+  static setIMCOnCreate(instance: any) {
+    const convertedHeight=(instance.height / 100);
+    const imc = instance.weight / (Math.pow(convertedHeight,2));
+    instance.setDataValue("imc",Number(imc.toFixed(1)))
+  }
+
+  static getSearchables(): Array<keyof IEval>{
+    return ["weight","height","note","imc"]
+  }
+
+  static  getRelations():Array<string>{
+    return ["patient"]
+  }
 
 }

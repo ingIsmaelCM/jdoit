@@ -1,6 +1,6 @@
 import {  Op} from "sequelize";
 import tools from "./tools";
-import moment from "moment";
+import * as moment from 'moment';
 import { IParams } from "@/utils/interfaces";
 import { DataType, Model, ModelCtor } from "sequelize-typescript";
 

@@ -78,4 +78,8 @@ export default class PlanFoodModel extends ModelBase implements IPlanFood {
       throw new BadRequestException("Error al actualizar los alimentos")
     }
   }
+
+  static getRelations(){
+    return ["food","plan","plan.planfoods"]
+  }
 }

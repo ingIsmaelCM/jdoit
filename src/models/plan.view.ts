@@ -131,15 +131,15 @@ export default class PlanView extends ModelBase implements IPlanView {
   @HasMany(() => PlanFoodModel, {
     foreignKey: "planId"
   })
-  foodPlan: IPlanFood[];
+  planfoods: IPlanFood[];
 
 
   static getSearchables(): Array<keyof IPlanView> {
     return ["day", "type", "patientName", "proteins", "calories", "carbohidrates", "fat",
-      "realCarbohidrates", "realProteins", "realCalories", "realFat"];
+      "realCarbohidrates", "realProteins", "realCalories", "realFat","patientId"];
   }
 
   static getRelations() {
-    return ["nutrient", "patient", "foodPlan", "foodPlan.food", "foodPlan.food.nutrient"];
+    return ["nutrient", "patient", "planfoods", "planfoods.food", "planfoods.food.nutrient"];
   }
 }

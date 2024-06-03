@@ -14,6 +14,7 @@ export interface IPatient extends ICommonField {
   plans: IPlan[];
   info: IInfo;
   code: string;
+  dob: Date;
 }
 
 
@@ -47,6 +48,12 @@ export default class PatientModel extends ModelBase implements IPatient {
     allowNull: true
   })
   code: string;
+
+  @Column({
+    type: DataType.DATEONLY(),
+    allowNull: true
+  })
+  dob: Date;
 
   @Column({
     type: DataType.VIRTUAL(DataType.STRING)

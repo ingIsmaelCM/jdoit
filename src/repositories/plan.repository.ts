@@ -24,7 +24,7 @@ export default class PlanRepository extends BaseRepository<PlanModel> {
         {
           transaction: trans, include: [{
             model: PlanFoodModel,
-            as:"foodPlan",
+            as:"planfoods",
 
           }]
         });

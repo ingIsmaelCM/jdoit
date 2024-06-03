@@ -53,7 +53,8 @@ class Tool {
     return `${str[0].toUpperCase()}${str.substring(1)}`.replace(/\s+/g, " ").trim();
   }
 
-  initialToUpper = (sentence: string = "") => sentence.replace(/\b[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+\b/gi,
+
+  initialToUpper = (sentence: string = "") => sentence.toLowerCase().replace(/\b[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+\b/gi,
     (match: string) => match !== match.toUpperCase() ? this.uppercaseFirst(match) : match)
     .replace(/\s+/g, " ").trim();
 

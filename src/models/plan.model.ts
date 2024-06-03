@@ -15,7 +15,7 @@ export interface IPlan extends ICommonField {
   patient: IPatient;
   nutrient: INutrient;
   foods: IFood[],
-  foodPlan: IPlanFood[]
+  planfoods: IPlanFood[]
 }
 
 export enum EPlanType {
@@ -97,7 +97,7 @@ export default class PlanModel extends ModelBase implements IPlan {
   @HasMany(()=>PlanFoodModel,{
     foreignKey: "planId"
   })
-  foodPlan: IPlanFood[]
+  planfoods: IPlanFood[]
 
 
   static  getSearchables():Array<keyof IPlan>{
@@ -105,7 +105,7 @@ export default class PlanModel extends ModelBase implements IPlan {
   }
 
   static  getRelations(){
-    return ["nutrient","patient","foodPlan","foodPlan.food","foodPlan.food.nutrient",]
+    return ["nutrient","patient","planfoods","planfoods.food","planfoods.food.nutrient",]
   }
 
 }

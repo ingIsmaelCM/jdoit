@@ -125,6 +125,13 @@ export default class PatientView extends ModelBase implements IPatientView {
   note: string;
 
   @Column({
+    type: DataType.DATEONLY(),
+    allowNull: true
+  })
+  dob: Date;
+
+
+  @Column({
     type: DataType.STRING(75),
     allowNull: true
   })
