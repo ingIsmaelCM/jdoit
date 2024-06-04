@@ -16,7 +16,7 @@ import { Server, Socket } from "socket.io";
   }
 })
 @Injectable()
-export default class PlansGateway implements OnGatewayConnection, OnGatewayInit, OnGatewayDisconnect {
+export default class SocketGateway implements OnGatewayConnection, OnGatewayInit, OnGatewayDisconnect {
 
   @WebSocketServer() server: Server;
   private readonly connectedClients: Set<Socket> = new Set();
@@ -24,7 +24,6 @@ export default class PlansGateway implements OnGatewayConnection, OnGatewayInit,
 
   @SubscribeMessage("suggestPlan")
   requestPlanSuggestion(@MessageBody() data: any, @ConnectedSocket() client: Socket) {
-    console.log(data);
     client.emit("response", data);
     return data;
   }
@@ -42,6 +41,7 @@ export default class PlansGateway implements OnGatewayConnection, OnGatewayInit,
   }
 
   emitMessage(eventName: string, data: unknown){
+    console.log(eventName)
     this.server.emit(eventName, data)
   }
 

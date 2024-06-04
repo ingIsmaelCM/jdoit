@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Put, Query } from "@nestjs/common";
+import { Controller, Delete, Get, Param, Patch, Post, Put, Query } from "@nestjs/common";
 import EvalService from "@/services/eval.service";
 import { ApiBody, ApiTags } from "@nestjs/swagger";
 import { IParams } from "@/utils/interfaces";
@@ -39,5 +39,15 @@ export default class EvalController {
   @Put(":id")
   updateEval(@Author() data: CreateEvalDto, @Param("id") id: string) {
     return this.evalService.updateEval(id, data);
+  }
+
+  @Delete(":id")
+  deleteEval(@Param("id") id: string) {
+    return this.evalService.deleteEval(id);
+  }
+
+  @Patch(":id")
+  restoreEval(@Param("id") id: string) {
+    return this.evalService.restoreEval(id);
   }
 }

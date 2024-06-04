@@ -29,14 +29,11 @@ export interface ICommonField {
 }
 
 
-export enum EStatusCode{
-  OK = 200,
-  Creado = 201,
-  NoAutorizado = 401,
-  Prohibido = 403,
-  NoEncontrado = 404,
-  EntidadNoProcesable = 422,
-  ErrorInterno = 500
+export  enum  EWhatsappStatus{
+  pending="Pendiente",
+  qrCode="Enviando QR",
+  connected="Conectado",
+  cancelled="Cancelado"
 }
 
 export interface IMailOptions{

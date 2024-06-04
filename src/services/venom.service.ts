@@ -1,36 +1,53 @@
 import { create, Whatsapp, Message } from "venom-bot";
+import { Injectable } from "@nestjs/common";
+import SocketGateway from "@/services/sockets/socket.gateway";
+import { EWhatsappStatus } from "@/utils/interfaces";
 
 export default class VenomService {
   private static clients: Map<string, Whatsapp> = new Map<string, any>();
-  public client: Whatsapp;
 
-  private constructor(userId: string) {
-    create({
+  private constructor() {
+  }
+
+  static async createClient(userId: string, socket: SocketGateway) {
+    await create({
       session: userId,
-      catchQR:(base64Qrimg, asciiQR, attempts, urlCode) => {
+      catchQR: (base64Qrimg, asciiQR, attempts, urlCode) => {
+        socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.qrCode, qr: urlCode });
+      },
 
-      },
-      statusFind:(statusSession, session)=>{
-        console.log('Status Session: ', statusSession);
-        console.log('Session name: ', session);
-      },
       disableSpins: false
     }).then((client) => {
       start(client);
       VenomService.clients.set(userId, client);
+      socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.connected });
+    }).catch(() => {
+      socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.cancelled });
     });
-
   }
 
-  static getClient(userId: string): Whatsapp {
+  static async getClient(userId: string, socket: SocketGateway): Promise<Whatsapp> {
     if (!VenomService.clients.get(userId)) {
-      new VenomService(userId);
+      socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.pending });
+      VenomService.createClient(userId, socket).then();
     }
     return this.clients.get(userId);
   }
 
+  static async removeClient(userId: string, socket: SocketGateway) {
+    if (VenomService.clients.get(userId)) {
+      socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.pending });
+      VenomService.clients.delete(userId);
+      socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.cancelled });
+    }
+  }
+
+  static checkClient(userId: string): Boolean {
+    return Boolean(this.clients.get(userId));
+  }
+
 }
 
-const start =  (client: Whatsapp) => {
+const start = (client: Whatsapp) => {
 
 };

@@ -1,4 +1,4 @@
-import { AfterCreate, BelongsToMany, Column, DataType, HasMany, Table } from "sequelize-typescript";
+import { AfterCreate, BelongsToMany, Column, DataType, HasMany, HasOne, Table } from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
 import { ICommonField } from "@/utils/interfaces";
 import tools from "@/utils/tools";
@@ -6,6 +6,7 @@ import InfoModel, { EInfoType, IInfo } from "@/models/info.model";
 import PlanModel, { IPlan } from "@/models/plan.model";
 import AddressModel, { IAddress } from "@/models/address.model";
 import { count } from "rxjs";
+import EvalModel, { IEval } from "@/models/eval.model";
 
 export interface IPatient extends ICommonField {
   name: string;
@@ -87,6 +88,16 @@ export default class PatientModel extends ModelBase implements IPatient {
   })
   plans: IPlan[];
 
+  @HasMany(() => EvalModel, {
+    foreignKey: "patientId"
+  })
+  evals: IEval[];
+
+  @HasOne(() => EvalModel, {
+    foreignKey: "patientId",
+  })
+  eval: IEval;
+
   @AfterCreate
   static createCode(instance: PatientModel) {
     PatientModel.count({ paranoid: false }).then((count: number) => {
@@ -94,6 +105,4 @@ export default class PatientModel extends ModelBase implements IPatient {
       instance.update({ code: code }).then();
     });
   }
-
-
 }

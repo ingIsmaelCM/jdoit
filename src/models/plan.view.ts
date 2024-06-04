@@ -140,6 +140,6 @@ export default class PlanView extends ModelBase implements IPlanView {
   }
 
   static getRelations() {
-    return ["nutrient", "patient", "planfoods", "planfoods.food", "planfoods.food.nutrient"];
+    return ["nutrient", "patient", "patient.eval","patient.evals","planfoods", "planfoods.food", "planfoods.food.nutrient"];
   }
 }

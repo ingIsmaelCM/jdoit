@@ -6,7 +6,7 @@ import { EPlanDay, IPlan } from "@/models/plan.model";
 import FoodService from "@/services/food.service";
 import PlanSuggestion, { IDiet } from "@/utils/plan-suggestion";
 import { CreatePlanDto, PlanSuggestionDto } from "@/validators/plan.validator";
-import PlansGateway from "@/services/sockets/plans.gateway";
+import SocketGateway from "@/services/sockets/socket.gateway";
 import { REQUEST } from "@nestjs/core";
 import { Request } from "express";
 import { Transaction } from "sequelize";
@@ -20,7 +20,7 @@ export default class PlanService extends BaseService {
               private readonly planRepo: PlanRepository,
               private readonly  planViewRepo: PlanViewRepository,
               private foodService: FoodService,
-              private readonly planGateWay: PlansGateway,
+              private readonly socketGateWay: SocketGateway,
               private readonly planSuggestion: PlanSuggestion
   ) {
     super();
@@ -81,7 +81,7 @@ export default class PlanService extends BaseService {
         throw new BadRequestException("La selección de alimentos es menor a 500. No se puede generar consulta");
       }
       const diets = await this.generateSuggestions(data, res);
-      this.planGateWay.emitMessage(`planSuggestion-${user.id}`, diets);
+      this.socketGateWay.emitMessage(`planSuggestion-${user.id}`, diets);
     });
     return { title: "Procesando datos" };
   }

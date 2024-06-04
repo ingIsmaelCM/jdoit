@@ -27,4 +27,12 @@ export default class EvalService extends BaseService {
   async updateEval(evalId: string, data: CreateEvalDto): Promise<any>{
     return  this.evalRepo.update(data, evalId);
   }
+
+  async deleteEval(evalId: string): Promise<any>{
+    return  this.evalRepo.delete(evalId)
+  }
+
+  async restoreEval(evalId: string): Promise<any>{
+    return  this.evalRepo.restore(evalId)
+  }
 }

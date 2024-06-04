@@ -1,9 +1,9 @@
 import { Module } from "@nestjs/common";
-import PlansGateway from "@/services/sockets/plans.gateway";
+import SocketGateway from "@/services/sockets/socket.gateway";
 
 
 @Module({
-  providers: [PlansGateway,],
-  exports: [PlansGateway]
+  providers: [SocketGateway,],
+  exports: [SocketGateway]
 })
 export  default  class  EventModule{}

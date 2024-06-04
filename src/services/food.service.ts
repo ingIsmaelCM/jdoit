@@ -7,7 +7,7 @@ import FoodView, { IFoodView } from "@/models/food.view";
 import { CreateFoodDto, UpdateFoodDto } from "@/validators/food.validator";
 import { Transaction } from "sequelize";
 import { CACHE_MANAGER, Cache } from "@nestjs/cache-manager";
-import PlansGateway from "@/services/sockets/plans.gateway";
+import SocketGateway from "@/services/sockets/socket.gateway";
 
 
 @Injectable()
@@ -15,7 +15,7 @@ export default class FoodService extends BaseService {
   constructor(
     @Inject(CACHE_MANAGER) private readonly cacheManager: Cache,
     private readonly foodRepo: FoodRepository,
-    private readonly planGateWay: PlansGateway,
+    private readonly planGateWay: SocketGateway,
     private readonly foodViewRepo: FoodViewRepository) {
     super();
   }

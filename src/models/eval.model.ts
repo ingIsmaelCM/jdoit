@@ -1,5 +1,4 @@
 import {
-  BeforeBulkCreate,
   BeforeBulkUpdate, BeforeCreate,
   BelongsTo,
   Column,
@@ -83,6 +82,8 @@ export default class EvalModel extends ModelBase implements IEval {
     const imc = instance.weight / (Math.pow(convertedHeight,2));
     instance.setDataValue("imc",Number(imc.toFixed(1)))
   }
+
+
 
   static getSearchables(): Array<keyof IEval>{
     return ["weight","height","note","imc"]
