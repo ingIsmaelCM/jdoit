@@ -17,6 +17,7 @@ import EventModule from "@/modules/event.module";
 import { BullModule } from "@nestjs/bull";
 import EvalModule from "@/modules/eval.module";
 import WhatsappModule from "@/modules/whatsapp.module";
+import ReminderModule from "@/modules/reminder.module";
 
 
 @Module({
@@ -24,7 +25,7 @@ import WhatsappModule from "@/modules/whatsapp.module";
     ScheduleModule.forRoot(),
     CacheModule.register(),
     UserModule, AuthModule, PatientModule, FoodModule, ProvinceModule,
-    CategoryModule, PlanModule, EventModule, EvalModule, WhatsappModule
+    CategoryModule, PlanModule, EventModule, EvalModule, WhatsappModule, ReminderModule
   ],
   controllers: [AppController],
 

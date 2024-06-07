@@ -6,7 +6,7 @@ import EventModule from "@/modules/event.module";
 
 @Module({
   imports: [EventModule],
-  exports:[],
+  exports:[WhatsappService],
   providers:[WhatsappService],
   controllers:[WhatsappController]
 })

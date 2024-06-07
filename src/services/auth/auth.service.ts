@@ -6,9 +6,9 @@ import * as bcrypt from "bcrypt";
 import { AuthLoginDto, AuthRegisterDto } from "@/validators/auth.validator";
 import SequelizeConnection from "@/database/sequelize.connection";
 import { authConfig } from "@/configs";
-import VenomService from "@/services/venom.service";
 import { CACHE_MANAGER, Cache } from "@nestjs/cache-manager";
 import FoodRepository from "@/repositories/food.repository";
+import UserViewRepository from "@/repositories/user-view.repository";
 
 
 @Injectable()
@@ -16,6 +16,7 @@ export class AuthService {
   constructor(@Inject(CACHE_MANAGER) private readonly cacheManager: Cache,
               private readonly foodRepo: FoodRepository,
               private readonly userRepo: UserRepository,
+              private readonly userViewRepo: UserViewRepository,
               private readonly jwtService: JwtService) {
 
   }
@@ -29,7 +30,8 @@ export class AuthService {
     if (!passwordIsValid) {
       throw new BadRequestException("Password is invalid");
     }
-    const { password, ...result } = user.dataValues;
+    const userAuth=await this.userViewRepo.findById(user.id)
+    const { password, ...result } = userAuth.dataValues;
     return result;
   }
 

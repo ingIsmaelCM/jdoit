@@ -1,4 +1,4 @@
-import { create, Whatsapp, Message } from "venom-bot";
+import { create, Whatsapp,  } from "venom-bot";
 import { Injectable } from "@nestjs/common";
 import SocketGateway from "@/services/sockets/socket.gateway";
 import { EWhatsappStatus } from "@/utils/interfaces";
@@ -7,6 +7,7 @@ export default class VenomService {
   private static clients: Map<string, Whatsapp> = new Map<string, any>();
 
   private constructor() {
+
   }
 
   static async createClient(userId: string, socket: SocketGateway) {
