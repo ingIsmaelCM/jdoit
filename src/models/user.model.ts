@@ -1,9 +1,6 @@
 import {
-  BelongsTo,
-  BelongsToMany,
   Column,
-  DataType, ForeignKey, HasMany,
-  HasOne,
+  DataType,  HasMany,
   IsUUID,
   Model,
   PrimaryKey,

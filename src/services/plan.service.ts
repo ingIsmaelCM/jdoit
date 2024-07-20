@@ -5,7 +5,7 @@ import { IParams } from "@/utils/interfaces";
 import { EPlanDay, IPlan } from "@/models/plan.model";
 import FoodService from "@/services/food.service";
 import PlanSuggestion, { IDiet } from "@/utils/plan-suggestion";
-import { CreatePlanDto, PlanSuggestionDto } from "@/validators/plan.validator";
+import { CreatePlanDto, PlanSuggestionDto, SendPlanDto } from "@/validators/plan.validator";
 import SocketGateway from "@/services/sockets/socket.gateway";
 import { REQUEST } from "@nestjs/core";
 import { Request } from "express";
@@ -38,7 +38,6 @@ export default class PlanService extends BaseService {
   }
 
   private reformatPlan(data: CreatePlanDto) {
-
    return data.foods.reduce((a: any, b: any) => {
       if (!a[b.day]) {
         a[b.day] = {
@@ -114,6 +113,11 @@ export default class PlanService extends BaseService {
 
   async getPlans(params: IParams): Promise<IPlan> {
     return await this.planViewRepo.getAll(params);
+  }
+
+  async sendPlanWhatsapp(data: SendPlanDto){
+    console.log(data)
+    return true;
   }
 
 }

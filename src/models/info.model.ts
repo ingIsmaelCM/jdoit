@@ -4,13 +4,9 @@ import {
   BelongsTo,
   Column,
   DataType, ForeignKey,
-  IsUUID,
-  Model,
-  PrimaryKey,
   Table
 } from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
-import tools from "@/utils/tools";
 import { ICommonField } from "@/utils/interfaces";
 import { Op } from "sequelize";
 import { HttpException, HttpStatus } from "@nestjs/common";
@@ -44,6 +40,7 @@ export enum EInfoType {
   indexes: [
     { fields: ["email", "infoType"], unique: true },
     { fields: ["dni", "infoType"], unique: true },
+    { fields: ["infoId", "infoType"], unique: true },
     { fields: ["phone", "infoType"], unique: true }
   ],
   paranoid: true,
@@ -111,21 +108,29 @@ export default class InfoModel extends ModelBase implements IInfo {
   @BeforeCreate
   @BeforeUpdate
   static async checkIfExists(instance: InfoModel) {
+    await this.checkDuplicated(instance.dataValues);
+  }
+
+  static async checkDuplicated(instance: InfoModel) {
     const existingInfo = await InfoModel.findOne({
       where: {
         infoType: instance.infoType,
         id: { [Op.ne]: instance.id || "" },
-        [Op.or]: {
-          phone: instance.phone || "",
-          email: instance.email || "",
-          dni: instance.dni || ""
+          [Op.or]: {
+            phone: instance.phone || "",
+            email: instance.email || "",
+            dni: instance.dni || ""
+          }
         }
-
-      }
     });
     if (existingInfo) {
       throw new HttpException("Duplicated info", HttpStatus.CONFLICT);
     }
+
+  }
+
+  static getSearchables(): Array<keyof IInfo> {
+    return ["email", "phone", "dni", "infoId", "infoType", "note"];
   }
 }
 

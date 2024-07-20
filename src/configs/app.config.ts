@@ -1,3 +1,4 @@
+
 const appConfig: Record<string, string | number> = {
   port: process.env.APP_PORT || 3000,
   name: process.env.APP_NAME || "myapp",

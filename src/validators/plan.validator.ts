@@ -116,3 +116,15 @@ export class CreatePlanDto implements Partial<IPlan> {
 
 
 }
+
+export class SendPlanDto{
+  @IsNotEmpty(validationConfig.isRequired())
+  @ApiProperty({
+    maxLength: 75
+  })
+  patientId: string;
+
+  @IsNotEmpty(validationConfig.isRequired())
+  image: any;
+
+}

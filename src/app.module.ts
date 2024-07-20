@@ -18,10 +18,14 @@ import { BullModule } from "@nestjs/bull";
 import EvalModule from "@/modules/eval.module";
 import WhatsappModule from "@/modules/whatsapp.module";
 import ReminderModule from "@/modules/reminder.module";
+import { ConfigModule } from "@nestjs/config";
 
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      envFilePath: ".env"
+    }),
     ScheduleModule.forRoot(),
     CacheModule.register(),
     UserModule, AuthModule, PatientModule, FoodModule, ProvinceModule,

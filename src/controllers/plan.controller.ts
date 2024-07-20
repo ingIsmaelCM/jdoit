@@ -2,7 +2,7 @@ import { Body, Controller, Get, HttpCode, Post, Query } from "@nestjs/common";
 import { ApiBody, ApiTags } from "@nestjs/swagger";
 import PlanService from "@/services/plan.service";
 import { IParams } from "@/utils/interfaces";
-import { CreatePlanDto, PlanSuggestionDto } from "@/validators/plan.validator";
+import { CreatePlanDto, PlanSuggestionDto, SendPlanDto } from "@/validators/plan.validator";
 import { Author } from "@/decorators/author.decorator";
 
 @ApiTags("Plan")
@@ -34,4 +34,11 @@ export default class PlanController {
     return this.planService.getSuggestions(data, params);
   }
 
+  @ApiBody({
+    type: CreatePlanDto
+  })
+  @Post("/sendwhatsapp")
+  async sendWhatsapp(@Author() data: SendPlanDto){
+    return this.planService.sendPlanWhatsapp(data)
+  }
 }

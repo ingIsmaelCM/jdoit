@@ -41,7 +41,7 @@ export class CreateFoodDto implements Partial<IFoodView> {
   @ApiProperty()
   fat: number;
 
-  @IsPositive(validationConfig.isMin())
+  @Min(0, validationConfig.isMin())
   @IsNotEmpty(validationConfig.isRequired())
   @ApiProperty()
   cholesterol: number;

@@ -1,14 +1,12 @@
 import { Controller, Delete, Get, Param, Patch, Post, Put, Query, Req } from "@nestjs/common";
 import { IParams } from "@/utils/interfaces";
 import FoodService from "@/services/food.service";
-import { ApiBody, ApiCookieAuth, ApiTags } from "@nestjs/swagger";
+import { ApiBody,  ApiTags } from "@nestjs/swagger";
 import { CreateFoodDto, UpdateFoodDto } from "@/validators/food.validator";
 import { Author } from "@/decorators/author.decorator";
 import { Request } from "express";
-import VenomService from "@/services/venom.service";
 
 @ApiTags("Foods")
-@ApiCookieAuth("jwt")
 @Controller("foods")
 export default class FoodController {
 

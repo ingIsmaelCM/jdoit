@@ -6,8 +6,8 @@ import { EInfoGender, EInfoType, IInfo } from "@/models/info.model";
 
 export class CreateInfoDto implements Partial<IInfo> {
 
-  @IsNotEmpty(validationConfig.isRequired())
   @Length(10, 20, validationConfig.isLength())
+  @IsNotEmpty(validationConfig.isRequired())
   @ApiProperty({ minimum: 10, maximum: 20 })
   phone: string;
 
@@ -31,29 +31,28 @@ export class CreateInfoDto implements Partial<IInfo> {
   @ApiProperty({ required: false, minimum: 10, maximum: 75 })
   addressId: string;
 
-
   @IsOptional()
   @Length(0, 250, validationConfig.isLength())
   @ApiProperty({ required: false, minimum: 0, maximum: 250 })
   note: string;
 
-  @ValidateIf(o => o.provinceId || o.municipeId)
   @IsNotEmpty(validationConfig.isRequired())
+  @ApiProperty({maximum: 120})
   line1: string;
 
-  @ValidateIf(o => o.line1 || o.municipeId)
   @IsNotEmpty(validationConfig.isRequired())
+  @ApiProperty({maximum: 75})
   provinceId: string;
 
-  @ValidateIf(o => o.provinceId || o.line1)
   @IsNotEmpty(validationConfig.isRequired())
+  @ApiProperty({maximum: 75})
   municipeId: string;
 }
 
 export class UpdateInfoDto implements Partial<IInfo> {
 
-  @IsOptional()
   @Length(10, 20, validationConfig.isLength())
+  @IsNotEmpty(validationConfig.isRequired())
   @ApiProperty({ minimum: 10, maximum: 20 })
   phone: string;
 

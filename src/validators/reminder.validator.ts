@@ -25,7 +25,7 @@ export class CreateReminderDto implements IReminder {
   description: string;
 
   @Matches(PATTERN_DAY, validationConfig.isRegex())
-  @IsNotEmpty(validationConfig.isRequired())
+  @Optional()
   @ApiProperty()
   day: string;
 
@@ -50,7 +50,6 @@ export class CreateReminderDto implements IReminder {
   })
   status: EReminderStatus;
 
-
   @IsEnum(EReminderType, validationConfig.isEnum(Object.values(EReminderType)))
   @IsNotEmpty(validationConfig.isRequired())
   @ApiProperty({
@@ -63,5 +62,15 @@ export class CreateReminderDto implements IReminder {
     required: false
   })
   tags: string;
+
+}
+
+export class ChangeStatusDto{
+  @IsEnum(EReminderStatus, validationConfig.isEnum(Object.values(EReminderStatus)))
+  @IsNotEmpty(validationConfig.isRequired())
+  @ApiProperty({
+    enum: Object.values(EReminderStatus)
+  })
+  status: EReminderStatus;
 
 }

@@ -188,6 +188,7 @@ export default class PatientView extends ModelBase implements IPatientView {
 
   @HasMany(() => InfoModel, {
     foreignKey: "infoId",
+    constraints: false,
     scope: {
       infoType: EInfoType.Patient
     }

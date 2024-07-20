@@ -6,10 +6,11 @@ import { AuthController } from "@/controllers/auth.controller";
 import { AuthService } from "@/services/auth/auth.service";
 import { LocalAuthStrategy } from "@/services/auth/local-auth.strategy";
 import { JwtAuthStrategy } from "@/services/auth/jwt-auth.strategy";
-import { CacheModule } from "@nestjs/cache-manager";
 import FoodRepository from "@/repositories/food.repository";
 import FoodModule from "@/modules/food.module";
 import NutrientRepository from "@/repositories/nutrient.repository";
+import InfoRepository from "@/repositories/info.repository";
+import AddressRepository from "@/repositories/address.repository";
 
 
 @Module({
@@ -23,7 +24,8 @@ import NutrientRepository from "@/repositories/nutrient.repository";
     })
   ],
   controllers: [AuthController],
-  providers: [AuthService, LocalAuthStrategy, JwtAuthStrategy, FoodRepository, NutrientRepository],
+  providers: [AuthService, LocalAuthStrategy, JwtAuthStrategy,
+     InfoRepository, AddressRepository],
   exports: [AuthService, JwtModule]
 })
 

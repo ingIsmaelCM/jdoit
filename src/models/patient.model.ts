@@ -65,6 +65,8 @@ export default class PatientModel extends ModelBase implements IPatient {
 
   @HasMany(() => InfoModel, {
     foreignKey: "infoId",
+    foreignKeyConstraint: false,
+    constraints: false,
     scope: {
       infoType: EInfoType.Patient
     }
@@ -74,6 +76,8 @@ export default class PatientModel extends ModelBase implements IPatient {
   @BelongsToMany(() => AddressModel, {
     through: () => InfoModel,
     foreignKey: "infoId",
+    foreignKeyConstraint: false,
+    constraints: false,
     targetKey: "id",
     otherKey: "addressId",
     scope: {

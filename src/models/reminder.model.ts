@@ -1,6 +1,7 @@
 import { ICommonField } from "@/utils/interfaces";
 import { Column, DataType, Table } from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
+import tools from "@/utils/tools";
 
 
 export interface IReminder extends ICommonField {
@@ -38,7 +39,9 @@ export default class ReminderModel extends ModelBase implements IReminder {
     type: DataType.STRING(75),
     allowNull: false
   })
-  title: string;
+  set title(value: string) {
+    this.setDataValue("title", tools.initialToUpper(value));
+  }
 
   @Column({
     type: DataType.STRING(250),
@@ -47,24 +50,23 @@ export default class ReminderModel extends ModelBase implements IReminder {
   description: string;
 
 
-
   @Column({
     type: DataType.STRING(150),
     allowNull: true
   })
   get tags() {
-    return this.getDataValue("tags").split(",");
+    return this.getDataValue("tags")?.split(",");
   }
 
   @Column({
-    type: DataType.STRING(50),
+    type: DataType.ENUM(...Object.values(EReminderStatus)),
     allowNull: false,
     defaultValue: EReminderStatus.pending
   })
   status: EReminderStatus;
 
   @Column({
-    type: DataType.STRING(250),
+    type: DataType.ENUM(...Object.values(EReminderType)),
     allowNull: false,
     defaultValue: EReminderType.oneTime
   })
@@ -99,5 +101,11 @@ export default class ReminderModel extends ModelBase implements IReminder {
     allowNull: true
   })
   doneAt: Date;
+
+  static getSearchables(): Array<keyof IReminder> {
+    return [
+      "dueAt", "time", "title", "description", "type", "tags", "status"
+    ];
+  }
 
 }

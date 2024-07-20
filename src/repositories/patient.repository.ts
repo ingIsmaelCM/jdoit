@@ -30,9 +30,11 @@ export default class PatientRepository extends BaseRepository<PatientModel> {
     trans: any,
     key?: string
   ): Promise<PatientModel> {
+    const prevInfo = await InfoModel.findByPk(data.infoModelId);
+    await prevInfo.update(data.infoModelId, data, { transaction: trans });
     await new InfoRepository().update(data, data.infoModelId, trans, key);
-    if(data.line1){
-      await new AddressRepository().update(data, data.addressId, trans, key)
+    if (data.line1) {
+      await new AddressRepository().update(data, data.addressId, trans, key);
     }
     return super.update(data, primaryKey, trans, key);
   }
