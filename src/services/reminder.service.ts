@@ -69,5 +69,8 @@ export default class ReminderService extends BaseService {
     }
   }
 
+  async deleteReminder(reminderId: string): Promise<IReminder>{
+    return await  this.reminderRepo.delete((reminderId))
+  }
 
 }

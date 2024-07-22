@@ -1,7 +1,17 @@
-import { create, Whatsapp,  } from "venom-bot";
-import { Injectable } from "@nestjs/common";
+import { create, Whatsapp } from "venom-bot";
 import SocketGateway from "@/services/sockets/socket.gateway";
 import { EWhatsappStatus } from "@/utils/interfaces";
+import * as fs from "fs";
+
+fs.readdir("./tokens", (err, files) => {
+  if (!err) {
+    files.forEach(async (file: string) => {
+      if (!VenomService.checkClient(file)) {
+        await VenomService.createClient(file);
+      }
+    });
+  }
+});
 
 export default class VenomService {
   private static clients: Map<string, Whatsapp> = new Map<string, any>();
@@ -10,20 +20,20 @@ export default class VenomService {
 
   }
 
-  static async createClient(userId: string, socket: SocketGateway) {
+  static async createClient(userId: string, socket?: SocketGateway) {
     await create({
       session: userId,
       catchQR: (base64Qrimg, asciiQR, attempts, urlCode) => {
-        socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.qrCode, qr: urlCode });
+        socket && socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.qrCode, qr: urlCode });
       },
 
       disableSpins: false
     }).then((client) => {
       start(client);
       VenomService.clients.set(userId, client);
-      socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.connected });
+      socket && socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.connected });
     }).catch(() => {
-      socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.cancelled });
+      socket && socket.emitMessage(`whatsappStatus-${userId}`, { status: EWhatsappStatus.cancelled });
     });
   }
 
@@ -44,6 +54,7 @@ export default class VenomService {
   }
 
   static checkClient(userId: string): Boolean {
+
     return Boolean(this.clients.get(userId));
   }
 

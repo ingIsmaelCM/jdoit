@@ -1,7 +1,7 @@
 import { Injectable, NotImplementedException } from "@nestjs/common";
 import VenomService from "@/services/venom.service";
 import SocketGateway from "@/services/sockets/socket.gateway";
-
+import * as fs from "fs"
 
 @Injectable()
 export default class WhatsappService {
@@ -32,12 +32,12 @@ export default class WhatsappService {
     }
   }
 
-  async sendImageMessage(userId: string, phone: string, image: any) {
-    console.log(phone)
+  async sendImageMessage(userId: string, phone: string, image: string, imageName:string, caption:string) {
     const hasClient = await this.checkClient(userId);
     if (hasClient) {
       const client = await VenomService.getClient(userId, this.socketGateWay);
-      client.sendImage(phone, image).then();
+      await client.sendImage(phone, image, imageName, caption);
+      fs.unlinkSync(image);
     } else {
       throw new NotImplementedException("Conexión no encontrada");
     }

@@ -10,13 +10,14 @@ import PlanViewRepository from "@/repositories/planview.repository";
 import PlanFoodService from "@/services/planfood.service";
 import PlanFoodRepository from "@/repositories/plan-food.repository";
 import PlanfoodController from "@/controllers/planfood.controller";
+import WhatsappService from "@/services/whatsapp.service";
 
 
 @Module({
   imports: [FoodModule, EventModule],
   exports: [],
   providers: [PlanService, PlanFoodService, PlanRepository, PlanViewRepository,
-    PlanSuggestion, NutrientRepository, PlanFoodRepository],
+    PlanSuggestion, NutrientRepository, PlanFoodRepository, WhatsappService],
   controllers: [PlanController, PlanfoodController]
 })
 

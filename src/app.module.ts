@@ -19,12 +19,27 @@ import EvalModule from "@/modules/eval.module";
 import WhatsappModule from "@/modules/whatsapp.module";
 import ReminderModule from "@/modules/reminder.module";
 import { ConfigModule } from "@nestjs/config";
+import { MulterModule } from "@nestjs/platform-express";
+import { diskStorage } from "multer";
+import e from "express";
 
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       envFilePath: ".env"
+    }),
+    MulterModule.registerAsync({
+      useFactory: () => ({
+        storage: diskStorage({
+          destination: "./upload",
+          filename: function(req, file, cb) {
+            const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1E9);
+            console.log(uniqueSuffix);
+            cb(null, file.fieldname + "-" + uniqueSuffix);
+          }
+        })
+      })
     }),
     ScheduleModule.forRoot(),
     CacheModule.register(),

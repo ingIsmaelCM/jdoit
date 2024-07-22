@@ -20,7 +20,7 @@ async function bootstrap() {
   configSwagger(app);
 
 
-  await app.listen(appConfig.port);
+  await app.listen(Number(appConfig.port));
 }
 
 function configSwagger(app: INestApplication) {

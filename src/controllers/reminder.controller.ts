@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Put, Query } from "@nestjs/common";
+import { Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import ReminderService from "@/services/reminder.service";
 import { Author } from "@/decorators/author.decorator";
 import { ChangeStatusDto, CreateReminderDto } from "@/validators/reminder.validator";
@@ -33,5 +33,10 @@ export default class ReminderController {
   @Put(":id/status")
   changeStatus(@Author() data: ChangeStatusDto, @Param("id") id: string) {
     return this.reminderService.changeStatus(id, data);
+  }
+
+  @Delete(":id")
+  deleteReminder(@Param("id") reminderId: string){
+    return this.reminderService.deleteReminder(reminderId)
   }
 }

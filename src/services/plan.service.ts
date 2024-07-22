@@ -1,4 +1,4 @@
-import { BadRequestException, Inject, Injectable, Scope } from "@nestjs/common";
+import { BadRequestException, Inject, Injectable, NotImplementedException, Scope } from "@nestjs/common";
 import BaseService from "@/services/base.service";
 import PlanRepository from "@/repositories/plan.repository";
 import { IParams } from "@/utils/interfaces";
@@ -11,6 +11,8 @@ import { REQUEST } from "@nestjs/core";
 import { Request } from "express";
 import { Transaction } from "sequelize";
 import PlanViewRepository from "@/repositories/planview.repository";
+import PatientViewRepository from "@/repositories/patientview.repository";
+import WhatsappService from "@/services/whatsapp.service";
 
 
 @Injectable({ scope: Scope.REQUEST })
@@ -18,10 +20,11 @@ export default class PlanService extends BaseService {
 
   constructor(@Inject(REQUEST) private request: Request,
               private readonly planRepo: PlanRepository,
-              private readonly  planViewRepo: PlanViewRepository,
+              private readonly planViewRepo: PlanViewRepository,
               private foodService: FoodService,
               private readonly socketGateWay: SocketGateway,
-              private readonly planSuggestion: PlanSuggestion
+              private readonly planSuggestion: PlanSuggestion,
+              private readonly whatsappService: WhatsappService
   ) {
     super();
   }
@@ -38,27 +41,27 @@ export default class PlanService extends BaseService {
   }
 
   private reformatPlan(data: CreatePlanDto) {
-   return data.foods.reduce((a: any, b: any) => {
-      if (!a[b.day]) {
-        a[b.day] = {
+    return data.foods.reduce((acc: any, food: any) => {
+      if (!acc[food.day]) {
+        acc[food.day] = {
           createdBy: (<any>data).createdBy,
           updatedBy: (<any>data).updatedBy,
-          day: b.day,
+          day: food.day,
           type: data.type,
           proteins: data.proteins,
           carbohidrates: data.carbohidrates,
           fat: data.fat,
           patientId: data.patientId,
           planfoods: [],
-          note: data.notes[b.day]||null
+          note: (data.notes||{})[food.day] || null
         };
       }
-      a[b.day].planfoods.push({
-        ...b,
+      acc[food.day].planfoods.push({
+        ...food,
         createdBy: (<any>data).createdBy,
         updatedBy: (<any>data).updatedBy
       });
-      return a;
+      return acc;
     }, {});
 
   }
@@ -115,8 +118,15 @@ export default class PlanService extends BaseService {
     return await this.planViewRepo.getAll(params);
   }
 
-  async sendPlanWhatsapp(data: SendPlanDto){
-    console.log(data)
+  async sendPlanWhatsapp(data: any, patientId: string) {
+    const patient = await new PatientViewRepository().findById(patientId);
+    const phone = patient.phone.replace(/\D/gi, "");
+    await this.whatsappService
+      .sendImageMessage(data.createdBy, `${phone}@g.us`, data.image.path,
+        data.image.filename, `*${data.caption||'Plan Nutricional'}:*\n*${patient.fullname}*`)
+      .then(async (res: any) => {
+        console.log(res);
+      });
     return true;
   }
 
