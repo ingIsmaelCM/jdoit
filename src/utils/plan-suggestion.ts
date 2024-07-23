@@ -1,5 +1,5 @@
 import { IFoodView } from "@/models/food.view";
-import { GatewayTimeoutException, Injectable } from "@nestjs/common";
+import { Injectable } from "@nestjs/common";
 
 export interface IDiet {
   proteins: number;
@@ -12,11 +12,11 @@ export interface IDiet {
 @Injectable()
 export default class PlanSuggestion {
   async getDiet(nutrients: IDiet, foods: Partial<IFoodView>[]) {
-    return getDiet(nutrients, foods);
+    return generateSuggestionForDiet(nutrients, foods);
   }
 }
 
-function getDiet(nutrients: IDiet, foods: Partial<IFoodView>[], retries = 0) {
+function generateSuggestionForDiet(nutrients: IDiet, foods: Partial<IFoodView>[], retries = 0) {
   let bestCombination = [];
   let bestDifference = Infinity;
   const { proteins, carbohidrates, fat, maxFoods, iterations = 1000 } = nutrients;
@@ -51,7 +51,7 @@ function getDiet(nutrients: IDiet, foods: Partial<IFoodView>[], retries = 0) {
   }
   //Hace hasta tres intentos para no devolver un resultado vacío
   if (bestCombination.length === 0 && retries < 10) {
-    return getDiet({
+    return generateSuggestionForDiet({
       proteins, carbohidrates, fat, maxFoods,
       iterations: iterations * 2
     }, foods, retries + 1);
@@ -75,8 +75,6 @@ function calculateDifference(currentProteins: number, currentCarbohidrates: numb
 
 function getRandomPortion() {
   return Number((Math.random() * (2.5 - 0.5) + 0.5).toFixed(1));
-  // console.log(random);
-  // return random;
 }
 
 

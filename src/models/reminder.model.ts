@@ -1,25 +1,20 @@
 import { ICommonField } from "@/utils/interfaces";
-import { Column, DataType, Table } from "sequelize-typescript";
+import { BelongsTo, Column, DataType, ForeignKey, Table } from "sequelize-typescript";
 import ModelBase from "@/models/model.base";
 import tools from "@/utils/tools";
+import PatientModel from "@/models/patient.model";
 
 
 export interface IReminder extends ICommonField {
   title: string;
   description: string;
-  tags: string;
-  type: EReminderType;
+  tags: string|string[];
   status: EReminderStatus;
   dueAt: string;
   day: string;
   time: string;
-  dayName: string;
   doneAt: Date;
-}
-
-export enum EReminderType {
-  recurrent = "Recurrente",
-  oneTime = "Único"
+  patientId?:string
 }
 
 export enum EReminderStatus {
@@ -65,12 +60,6 @@ export default class ReminderModel extends ModelBase implements IReminder {
   })
   status: EReminderStatus;
 
-  @Column({
-    type: DataType.ENUM(...Object.values(EReminderType)),
-    allowNull: false,
-    defaultValue: EReminderType.oneTime
-  })
-  type: EReminderType;
 
   @Column({
     type: DataType.DATE(),
@@ -94,18 +83,26 @@ export default class ReminderModel extends ModelBase implements IReminder {
     type: DataType.DATE(),
     allowNull: true
   })
-  dayName: string;
+  doneAt: Date;
 
+  @ForeignKey(()=>PatientModel)
   @Column({
-    type: DataType.DATE(),
+    type: DataType.STRING,
     allowNull: true
   })
-  doneAt: Date;
+  patientId: string
+
+  @BelongsTo(()=>PatientModel)
+  patient: PatientModel
 
   static getSearchables(): Array<keyof IReminder> {
     return [
-      "dueAt", "time", "title", "description", "type", "tags", "status"
+      "dueAt", "time", "title", "description",  "tags", "status"
     ];
+  }
+
+  static  getRelations():Array<string>{
+    return ["patient"]
   }
 
 }

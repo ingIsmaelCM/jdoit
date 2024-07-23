@@ -5,6 +5,7 @@ import { Request } from "express";
 export const Author = createParamDecorator((
   (isOld: boolean, ctx: ExecutionContext) => {
     const request: Request = ctx.switchToHttp().getRequest();
+    isOld=Boolean(request.body.id);
     request.body = {
       ...request.body,
       updatedBy: (request.user as any).user.id,

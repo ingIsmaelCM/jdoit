@@ -1,7 +1,7 @@
 import { Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import ReminderService from "@/services/reminder.service";
 import { Author } from "@/decorators/author.decorator";
-import { ChangeStatusDto, CreateReminderDto } from "@/validators/reminder.validator";
+import { ChangeStatusDto, ReminderDto, ReprogramReminderDto } from "@/validators/reminder.validator";
 import { ApiBody, ApiTags } from "@nestjs/swagger";
 import { IParams } from "@/utils/interfaces";
 
@@ -20,11 +20,29 @@ export default class ReminderController {
 
 
   @ApiBody({
-    type: CreateReminderDto
+    type: ReminderDto
   })
   @Post()
-  createReminded(@Author() data: CreateReminderDto) {
+  createReminded(@Author() data: ReminderDto) {
     return this.reminderService.createReminder(data);
+  }
+
+
+
+  @ApiBody({
+    type: ReminderDto
+  })
+  @Put(":id")
+  updateReminder(@Author() data: ReminderDto, @Param("id") reminderId: string) {
+    return this.reminderService.updateReminder(reminderId, data);
+  }
+
+  @ApiBody({
+    type: ReprogramReminderDto
+  })
+  @Put(":id/reprogram")
+  reprogramReminded(@Author() data: ReprogramReminderDto, @Param("id") reminderId: string) {
+    return this.reminderService.reprogramReminder(reminderId, data);
   }
 
   @ApiBody({
