@@ -34,7 +34,6 @@ export default class ReminderService extends BaseService {
     });
   }
 
-
   async updateReminder(reminderId: string, data: ReminderDto) {
     return this.runWithTrans(async (trans: Transaction) => {
       const { cronDate, user, formattedData } = await this.formatReminderData(data);
@@ -44,7 +43,6 @@ export default class ReminderService extends BaseService {
       return reminder;
     });
   }
-
   async reprogramReminder(reminderId: string, data: ReprogramReminderDto) {
     return this.runWithTrans(async (trans: Transaction) => {
       const { cronDate, user, formattedData } = await this.formatReminderData(data);
