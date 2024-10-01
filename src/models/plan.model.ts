@@ -39,9 +39,7 @@ export enum EPlanDay {
 @Table({
   tableName: "plans",
   paranoid: true,
-  indexes: [
-    { fields: ["type", "patientId", "day"], unique: true }
-  ]
+ 
 })
 export default class PlanModel extends ModelBase implements IPlan {
 

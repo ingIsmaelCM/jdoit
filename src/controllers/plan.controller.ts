@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, Param, Post, Query, UploadedFile, UseInterceptors } from "@nestjs/common";
+import { Body, Controller, Delete, Get, HttpCode, Param, Post, Query, UploadedFile, UseInterceptors } from "@nestjs/common";
 import { ApiBody, ApiTags } from "@nestjs/swagger";
 import PlanService from "@/services/plan.service";
 import { IParams } from "@/utils/interfaces";
@@ -43,5 +43,10 @@ export default class PlanController {
                      @UploadedFile() files: Express.Multer.File) {
     data.image = files;
     return this.planService.sendPlanWhatsapp(data, patientId);
+  }
+
+  @Delete("/:id")
+  async deletePlan(@Param("id") id: string) {
+    return this.planService.deletePlan(id);
   }
 }

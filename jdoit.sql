@@ -675,7 +675,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`tmp_moso`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `foodview` AS select `f`.`id` AS `id`,`f`.`createdAt` AS `createdAt`,`f`.`updatedAt` AS `updatedAt`,`f`.`createdBy` AS `createdBy`,`f`.`updatedBy` AS `updatedBy`,`f`.`name` AS `name`,`f`.`categoryId` AS `categoryId`,`f`.`nutrientId` AS `nutrientId`,`f`.`deletedAt` AS `deletedAt`,`f`.`priority` AS `priority`,`n`.`portion` AS `portion`,`n`.`calories` AS `calories`,`n`.`proteins` AS `proteins`,`n`.`carbohidrates` AS `carbohidrates`,`n`.`fat` AS `fat`,`n`.`cholesterol` AS `cholesterol`,`c`.`name` AS `categoryName` from ((`foods` `f` left join `nutrients` `n` on((`f`.`nutrientId` = `n`.`id`))) left join `categories` `c` on((`f`.`categoryId` = `c`.`id`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -693,7 +692,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`tmp_moso`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `infoview` AS select `i`.`id` AS `infoModelId`,`i`.`email` AS `email`,`i`.`phone` AS `phone`,`i`.`dni` AS `dni`,`i`.`gender` AS `gender`,`i`.`infoType` AS `infoType`,`i`.`infoId` AS `infoId`,`i`.`note` AS `note`,`i`.`addressId` AS `addressId`,`a`.`line1` AS `line1`,`a`.`line2` AS `line2`,`a`.`municipeId` AS `municipeId`,`a`.`provinceId` AS `provinceId`,`p`.`name` AS `province`,`p`.`code` AS `provinceCode`,`m`.`name` AS `municipe`,`m`.`code` AS `municipeCode` from (((`infos` `i` left join `address` `a` on((`i`.`addressId` = `a`.`id`))) left join `provinces` `p` on((`a`.`provinceId` = `p`.`id`))) left join `municipes` `m` on((`a`.`municipeId` = `m`.`id`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -711,7 +709,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`tmp_moso`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `patientview` AS select `p`.`id` AS `id`,`p`.`createdAt` AS `createdAt`,`p`.`updatedAt` AS `updatedAt`,`p`.`createdBy` AS `createdBy`,`p`.`updatedBy` AS `updatedBy`,`p`.`name` AS `name`,`p`.`lastname` AS `lastname`,`p`.`deletedAt` AS `deletedAt`,`p`.`code` AS `code`,`p`.`dob` AS `dob`,`i`.`infoModelId` AS `infoModelId`,`i`.`email` AS `email`,`i`.`phone` AS `phone`,`i`.`dni` AS `dni`,`i`.`gender` AS `gender`,`i`.`infoType` AS `infoType`,`i`.`infoId` AS `infoId`,`i`.`note` AS `note`,`i`.`addressId` AS `addressId`,`i`.`line1` AS `line1`,`i`.`line2` AS `line2`,`i`.`municipeId` AS `municipeId`,`i`.`provinceId` AS `provinceId`,`i`.`province` AS `province`,`i`.`provinceCode` AS `provinceCode`,`i`.`municipe` AS `municipe`,`i`.`municipeCode` AS `municipeCode` from (`patients` `p` left join `infoview` `i` on((`i`.`infoId` = `p`.`id`))) where ((`i`.`infoType` = 'Patient') or (`i`.`phone` is null)) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -729,7 +726,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`tmp_moso`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `planview` AS select `p`.`id` AS `id`,`p`.`createdAt` AS `createdAt`,`p`.`updatedAt` AS `updatedAt`,`p`.`createdBy` AS `createdBy`,`p`.`updatedBy` AS `updatedBy`,`p`.`type` AS `type`,`p`.`day` AS `day`,`p`.`note` AS `note`,`p`.`nutrientId` AS `nutrientId`,`p`.`patientId` AS `patientId`,`p`.`deletedAt` AS `deletedAt`,concat(`pat`.`name`,' ',`pat`.`lastname`) AS `patientName`,`pn`.`proteins` AS `proteins`,`pn`.`calories` AS `calories`,`pn`.`fat` AS `fat`,`pn`.`carbohidrates` AS `carbohidrates`,round(sum((`pf`.`portion` * `fn`.`proteins`)),2) AS `realProteins`,round(sum((`pf`.`portion` * `fn`.`fat`)),2) AS `realFat`,round(sum((`pf`.`portion` * `fn`.`carbohidrates`)),2) AS `realCarbohidrates`,round(sum((`pf`.`portion` * `fn`.`calories`)),2) AS `realCalories` from (((((`plans` `p` left join `nutrients` `pn` on((`p`.`nutrientId` = `pn`.`id`))) left join `plan_foods` `pf` on((`pf`.`planId` = `p`.`id`))) left join `foods` `f` on((`pf`.`foodId` = `f`.`id`))) left join `nutrients` `fn` on((`f`.`nutrientId` = `fn`.`id`))) left join `patientview` `pat` on((`p`.`patientId` = `pat`.`id`))) where ((`pf`.`deletedAt` is null) and (`f`.`deletedAt` is null) and (`pat`.`deletedAt` is null) and (`fn`.`deletedAt` is null) and (`pn`.`deletedAt` is null)) group by `p`.`id` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -747,7 +743,6 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`tmp_moso`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `userview` AS select `u`.`id` AS `id`,`u`.`name` AS `name`,`u`.`lastname` AS `lastname`,`u`.`username` AS `username`,NULL AS `password`,`i`.`infoModelId` AS `infoModelId`,`i`.`email` AS `email`,`i`.`phone` AS `phone`,`i`.`dni` AS `dni`,`i`.`gender` AS `gender`,`i`.`infoType` AS `infoType`,`i`.`infoId` AS `infoId`,`i`.`note` AS `note`,`i`.`addressId` AS `addressId`,`i`.`line1` AS `line1`,`i`.`line2` AS `line2`,`i`.`municipeId` AS `municipeId`,`i`.`provinceId` AS `provinceId`,`i`.`province` AS `province`,`i`.`provinceCode` AS `provinceCode`,`i`.`municipe` AS `municipe`,`i`.`municipeCode` AS `municipeCode`,`u`.`createdAt` AS `createdAt`,`u`.`updatedAt` AS `updatedAt`,`u`.`deletedAt` AS `deletedAt` from (`users` `u` left join `infoview` `i` on((`i`.`infoId` = `u`.`id`))) where ((`i`.`infoType` = 'User') or (`i`.`phone` is null)) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;

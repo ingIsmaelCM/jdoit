@@ -7,6 +7,10 @@ import * as cookieParser from "cookie-parser";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import { version } from "../package.json";
 
+
+if (appConfig.env === 'dev') {
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+}
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   SequelizeConnection.getInstance();
@@ -19,6 +23,10 @@ async function bootstrap() {
   app.use(cookieParser(String(appConfig.key)));
   configSwagger(app);
 
+  app.enableCors({
+    allowedHeaders: '*',
+    origin:'*'
+  })
 
   await app.listen(Number(appConfig.port));
 }

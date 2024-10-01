@@ -118,6 +118,10 @@ export default class PlanService extends BaseService {
     return await this.planViewRepo.getAll(params);
   }
 
+  async deletePlan(id: string): Promise<IPlan>{
+    return await this.planRepo.delete(id);
+  }
+
   async sendPlanWhatsapp(data: any, patientId: string) {
     const patient = await new PatientViewRepository().findById(patientId);
     const phone = patient.phone.replace(/\D/gi, "");

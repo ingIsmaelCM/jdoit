@@ -4,7 +4,7 @@ import { MulterOptions } from "@nestjs/platform-express/multer/interfaces/multer
 const appConfig: Record<string, string | number | MulterOptions> = {
   port: process.env.APP_PORT || 3000,
   name: process.env.APP_NAME || "myapp",
-  env: process.env.APP_ENV || "env",
+  env: process.env.APP_ENV || "dev",
   key: process.env.APP_KEY || "",
   multerOptions: {
     storage: diskStorage({

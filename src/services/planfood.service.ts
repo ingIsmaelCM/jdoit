@@ -20,7 +20,7 @@ export default class PlanFoodService extends BaseService {
 
   async deletePlanFood(planFoodId: string): Promise<any> {
     const planFood = await this.planfoodRepo.findById(planFoodId, { include: "plan.planfoods" });
-    if (planFood.plan.planfoods.length <= 1) {
+    if (planFood?.plan?.planfoods.length <= 1) {
       throw new PreconditionFailedException("No puede eliminar este alimento del plan");
     }
     return await this.planfoodRepo.delete(planFoodId);
