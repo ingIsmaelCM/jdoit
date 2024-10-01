@@ -1,3 +1,4 @@
+import "dotenv/config"
 import { NestFactory } from "@nestjs/core";
 import SequelizeConnection from "@/database/sequelize.connection";
 import { AppModule } from "@/app.module";
@@ -7,7 +8,6 @@ import * as cookieParser from "cookie-parser";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import { version } from "../package.json";
 
-console.log(appConfig);
 
 if (appConfig.env === 'dev') {
   process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
