@@ -28,7 +28,7 @@ import e from "express";
   imports: [
     ConfigModule.forRoot({
       envFilePath: `${process.cwd()}/.env`,
-    }),,
+    }),
     MulterModule.registerAsync({
       useFactory: () => ({
         storage: diskStorage({

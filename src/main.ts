@@ -1,7 +1,7 @@
+import { appConfig, authConfig } from "@/configs";
 import { AppModule } from "@/app.module";
 import { NestFactory } from "@nestjs/core";
 import SequelizeConnection from "@/database/sequelize.connection";
-import { appConfig, authConfig } from "@/configs";
 import { INestApplication, ValidationPipe } from "@nestjs/common";
 import * as cookieParser from "cookie-parser";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
