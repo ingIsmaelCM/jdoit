@@ -6,7 +6,7 @@ import { Optional } from "@nestjs/common";
 
 
 const PATTERN_DAY=/^(0?[1-9]|[12][0-9]|3[01])-(0?[1-9]|1[0-2])$/;
-const PATTERN_TIME=/^(?:[01]\d|2[0-3]):[0-5]\d$/;
+const PATTERN_TIME=/^(?:[0-9]|[0-1][0-9]|2[0-3]):[0-5][0-9]$/;
 
 export class ReminderDto implements IReminder {
 

@@ -43,6 +43,8 @@ export default class ReminderService extends BaseService {
       return reminder;
     });
   }
+  
+
   async reprogramReminder(reminderId: string, data: ReprogramReminderDto) {
     return this.runWithTrans(async (trans: Transaction) => {
       const { cronDate, user, formattedData } = await this.formatReminderData(data);
@@ -92,11 +94,12 @@ export default class ReminderService extends BaseService {
     job.runOnce = true;
   }
 
-
   private async generateMessageToSend(user: IUserView, data: IReminder, phone: string) {
     const hasWsClient = await this.whatsappService.checkClient(user.id);
-    const message = `*${data.title}:*\n${data.description}\n${data.dueAt}\n${data.tags ? (<string[]>data.tags)
-      .map((t: string) => "*_" + t + "_*").join(" ") : ""}`;
+    const message = `*${data.title}:*\n${data.description}\n${data.dueAt}\n${data.tags ? (<string>data.tags)
+      .split(",")
+      .map((t: string) => "*_" + t + "_*")
+      .join(" ") : ""}`;
     if (hasWsClient) {
       await this.whatsappService.connectClient(user.id);
       await this.whatsappService
@@ -110,5 +113,4 @@ export default class ReminderService extends BaseService {
   async deleteReminder(reminderId: string): Promise<IReminder> {
     return await this.reminderRepo.delete((reminderId));
   }
-
 }
