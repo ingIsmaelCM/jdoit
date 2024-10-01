@@ -1,4 +1,4 @@
-
+import "dotenv/config"
 import appConfig from "@/configs/app.config";
 import databaseConfig  from "@/configs/database.config";
 import {authConfig} from "@/configs/auth.config";
